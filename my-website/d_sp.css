@@ -1,0 +1,2112 @@
+@charset "utf-8";
+
+
+ @media screen and (max-width: 768px) {
+
+  body,p,span,div,img{
+      margin:0;
+      padding:0;
+  	border:none;
+  	outline:none;
+  }
+
+
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+/*html {
+    font-size: 100%;
+  }*/
+
+body{
+	font-weight: normal;
+	font-size: 1.6rem;
+	line-height: 1.8;
+	position: relative;
+/*	background-color: #000000;
+*/}
+
+/*
+body:before{
+  content:"";
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height:100vh;
+  background:url(../../../../images/auto/sal/body1_sp.jpg) center no-repeat;
+  background-size:cover;
+}*/
+
+img.img100{width: 100%;}
+img.img90{width: 90%;}
+img.img80{width: 80%;}
+img.img70{width: 70%;}
+img.img60{width: 60%;}
+img.img50{width: 50%;}
+img.img40{width: 40%;}
+img.img30{width: 30%;}
+img.img20{width: 20%;}
+img.w100{width: 100%;}
+
+
+
+/*br{display: none;}*/
+br.ps{display: block;}
+br.pb{display: none;}
+br.sb{display: block;}
+table br{display: block;}
+
+.pv{display: none;}
+.sv{display: block;}
+.tv{display: block;}
+
+
+/*　head
+*********************************************************/
+
+.bg-wrap {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.bg-wrap .bg-head{
+	position: relative;
+	width: 100%;
+	height: auto;
+
+}
+
+
+
+.bg-head:before{
+  content:"";
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height:100vh;
+  background:url(../../../../images/auto/sal/body_sp9.jpg) center no-repeat;
+  background-size:cover;
+}
+
+
+
+
+.overlay {
+  width: 100%;
+  height: 80rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(45deg, rgba(0,0,0,.2) 50%, rgba(0,0,0,.4) 50%);
+  background-size: 3px 3px;
+  z-index: 2;
+}
+
+
+@keyframes light-line-r {
+    0% {
+		background: linear-gradient(to right, Magenta, yellow, Cyan, Magenta) 0% center/200%;
+    	width: 1%;
+    	height: 0.5rem;
+        opacity:1;
+    }
+    100% {
+		background: linear-gradient(to right, Magenta, yellow, Cyan, Magenta) 0% center/200%;
+    	width: 100%;
+    	height: 0.5rem;
+        opacity:1;
+    }
+}
+
+
+/*=======================================*/
+
+#wrapper{
+	margin:0 auto;
+	/* min-height: 100vh; */
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+
+#header {
+	width: 100%;
+	height: auto;
+/*	min-height: 100vh;*/
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+#header img.head{
+	width: 95%;
+}
+
+
+/*
+.hd-1 {
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+}
+.hd-2 {
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+}
+.hd-3 {
+  animation-delay: 1.7s;
+}
+*/
+/*=======================================*/
+
+#global-nav{
+	background-image: url(../../../../images/auto/surv/bg-globalmenu.png);
+	background-size: 100%;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 5rem;
+	margin-left: auto;
+	margin-right: auto;
+	color: #ffffff;
+	z-index: 999999;
+	position: fixed;
+	border-top: 1rem solid #8E2536;
+}
+
+#global-nav.m_fixed {
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+}
+
+ul.menu{
+	margin: 0 auto;
+	width: auto;
+	height: 100%;
+	font-size: 1.2rem;
+	line-height: 1.5;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content:center;
+	list-style: none;
+}
+
+
+ul.menu li a{
+	padding: 0rem 1rem 0rem 1rem;
+	margin-right: 0rem;
+	color: #fffb00;
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	border-bottom: none;
+}
+
+ul.menu li a i{
+	font-size: 1.4rem;
+	margin: auto;
+	display: block;
+}
+
+
+/*=======================================*/
+
+
+.container{
+	width: 100%;
+	overflow: hidden;
+	margin:0 auto;
+	/* padding: 0 0.5rem; */
+}
+
+
+
+.main{
+	width:100%;
+	margin: 0 auto;
+	/* padding: 0rem 0.5rem 2rem 0.5rem; */
+	z-index: 4;
+}
+
+.area-main{
+	width:98%;
+	z-index: 4;
+}
+
+
+.main-wt{
+	background-image: url(../../../../images/auto/sal/bg-section_wt.jpg);
+	background-position:  center;
+	background-size:200%;
+	background-attachment: local;
+	box-shadow: 0 0px 20px #666028 inset;
+
+}
+
+
+.main-bl{
+	background-image: linear-gradient(to left, #cc208e 0%, #6713d2 100%);
+}
+.main-pk{
+	background-image: linear-gradient(to right, #231557 0%, #44107A 29%, #FF1361 67%,  #FF8D2E 100%);
+}
+
+/*=========================*/
+
+.text{
+	width: 100%;
+	margin: 0px auto;
+	text-align: left;
+	padding: 1rem 1.5rem 4rem 1.5rem;
+}
+
+
+p{
+	padding-top:4.8rem;
+}
+
+
+/*=========================*/
+
+
+
+
+/*=======================================*/
+
+
+section.bace{
+	width: 100%;
+	height:auto;
+	background-image: url(../../../../images/auto/sal/bg-cwt.png);
+	background-position: center;
+	background-size: 200%;
+	position: relative;
+}
+
+section.bace-rainbow{
+	width: 100%;
+	height:auto;
+	background-image: url(../../../../images/auto/sal/body7.jpg);
+	background-position: center;
+	padding: 2rem 0;
+	position: relative;
+}
+
+
+
+.area-bo{
+	border:0.5rem solid #bc1c00;
+}
+
+.area-warning{background-size: 40%;}
+
+.shadow{
+	box-shadow: 0 0px 15px #290a7f;
+}
+
+
+
+/*==========================================*/
+
+
+.box p{
+/*	padding: 0.2rem;
+*/}
+
+.box i{
+	margin-top: 0.3rem;
+/*	color: #ff0000;
+*/}
+
+.box .w20{	width: 30%;}
+
+.box-table .fs25{	font-size: 1.4rem;}
+
+.box-table .w20{	width: 30%; }
+.box-table .w30{	width: 40%;}
+
+
+.t-shadow-s{
+	  text-shadow: -0.5px -0.5px 0.5px rgba(100, 100, 100, .5),
+               1px 1px 1px rgba(255, 255, 255, .7);
+}
+
+.spblock{
+	display: flex;
+	flex-wrap:wrap;
+}
+
+
+/*=======================================*/
+
+
+.sche .box{
+	display: block;
+	width: 100%;
+}
+
+.sche .box p{
+	width: 100%;
+}
+
+.sche .box br{
+	display: block;
+}
+
+
+.blue-bt{
+	background-image: url(../../../../images/auto/sal/bt-bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 80%;
+}
+
+.blue-bt img{
+	margin: 0 auto;
+}
+
+
+ul.simulation-result li{
+	display: inline-flex;
+	flex-wrap: nowrap;
+	padding: 1rem 2rem;
+	font-size: 2rem;
+	background-color: #ffffff;
+	border-radius: 1rem;
+}
+
+
+
+
+
+/* result
+**********************************************************/
+.result{
+	padding: 0.5rem;
+}
+
+.result li{
+	width: 100%;
+	font-size: 1.5rem;
+	text-align: left;
+	padding: 0.7rem;
+}
+
+.result li .hit .money{
+	font-size: 2rem;
+}
+
+.result-data{
+	padding: 1rem;
+	background-color: #000000;
+	text-align: left;
+}
+
+.result-data br.sb{
+	display: block;
+}
+
+.result-box{
+	width: 100%;
+	margin-bottom: 3rem;
+	display:block;
+	font-size: 1.5rem;
+}
+
+.l-box{
+	text-align: left;
+	margin-right: 0;
+}
+
+.l-number{
+	display: inline-flex;
+	width: 100%;
+}
+
+
+.l-number p.hdd{
+	width:30%;
+	font-size: 1.4rem;
+	margin-right:0.1rem;
+	padding-left: 1rem;
+}
+
+
+.l-number p{
+	padding: 0.5rem;
+	margin-bottom: 0.1rem;
+}
+
+.r-box{
+	margin-top: 2rem;
+}
+.r-number{
+	display: inline-flex;
+	flex-wrap: wrap;
+	text-align: left;
+}
+
+
+.r-number p.hdd{
+	flex-basis: auto;
+	width:40%;
+	font-size: 1.4rem;
+	margin-right:0.1rem;
+	padding-left: 1rem;
+}
+
+.r-number p{
+	width: 59%;
+	padding: 0.5rem;
+	margin-bottom: 0.1rem;
+}
+
+
+.r-number p.money{
+	font-size: 1.8rem;
+}
+
+
+/*　
+*********************************************************/
+
+.note4{
+	width: 98%;
+  color: #010427;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px #e6e6e6;
+  padding: 0.5rem;
+  box-shadow:2px 2px 0 rgba(0,0,0,.1);
+}
+.sen4{
+  padding: 0.2em 0.5em 1.8em 0.5em;
+}
+.sen4 p{
+  padding: 0.2em 0.5em 1.8em 0.5em;
+}
+
+.note4 img{
+	width: 25%;
+}
+
+
+ul.monitor li img.icon{
+	width: 8rem;
+	height: 8rem;
+
+}
+ul.monitor .item {
+	width: 100%;
+	padding: 1rem;
+	font-size: 1.5rem;
+}
+
+/*　
+*********************************************************/
+
+/*==========================================*/
+
+.bg-flash{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 25rem;
+	margin-right:auto;
+	margin-left: auto;
+}
+
+.bg-flash div{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+
+
+/*===================================*/
+
+
+.hidden_box label {
+	width: 85%;
+	padding: 2rem 1rem;
+}
+
+
+/*===================================*/
+
+
+.ribbon19-wrapper {
+	padding: 1rem;
+	font-size: 1.5rem;
+}
+
+
+.ribbon19 {
+  display: inline-block;
+  position: absolute;
+  padding: 5px 0;
+  left: -16px;
+  top: 12px;
+  width: 160px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  background: #d60000;
+  color: #fff;
+  letter-spacing: 0.05em;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 2px rgb(214, 0, 0);
+  border-top: dashed 1px rgba(255, 255, 255, 0.65);
+  border-bottom: dashed 1px rgba(255, 255, 255, 0.65);
+}
+
+/*===================================*/
+
+.form {
+	width: 100%;
+}
+
+
+
+
+a.graybt{
+	margin: 1rem auto ;
+	width:95%;
+	font-size:1.8rem;
+	padding:1.5rem 1rem;
+}
+
+
+
+label {
+	margin: 0rem auto 1rem;
+	width: 100%;
+	font-weight: bold;
+/*	text-align: left;
+*/	cursor:pointer;
+	color: #000000;
+	padding: 2rem 2rem;
+	border-radius: 0.5rem;
+	display: inline-block;
+}
+
+label:hover {
+	border: none;
+}
+
+input[type=radio] {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  -moz-transform-origin: right bottom;
+  -moz-transform: scale( 1.2 , 1.2 );
+}
+
+input[type="text"]{
+	width:100%;
+	padding:1rem 0.5rem;
+	font-size:1.8rem;
+	margin: 0 auto;
+}
+
+
+
+/* input[type="submit"]{
+	width:90%;
+	font-size:1.8rem;
+	font-weight:bold;
+	color:#ffffff;
+	padding:2rem 0.5rem;
+	cursor:pointer;
+} */
+
+
+/*===================================*/
+
+
+/*===========================================*/
+
+/*===========================================*/
+
+.area-form{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.form-deux{
+	display: block;
+}
+
+table.tokuten{
+	width: 98%;
+	font-size: 1.4rem;
+}
+
+
+table.list{
+	width:100%;
+	font-size: 1.4rem;
+	padding: 0rem;
+}
+
+
+table.list th{
+	width:100%;
+	padding:1rem 0.5rem;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	display: block;
+	border-right: none;
+}
+
+
+table.list th br{
+	display: none;
+}
+
+table.list th br.sp-b{
+	display: block;
+}
+
+table.list td{
+	padding:0.5rem 0.5rem 2rem 0.5rem;
+	text-align: left;
+	display: block;
+}
+
+
+
+
+table.gouka th{
+	width: 100%;
+	display: block;
+	padding: 0.5rem 0;
+	text-align: center;
+	vertical-align: middle;
+}
+
+table.gouka td{
+	width: 70%;
+	display: inline-block;
+	padding: 0.5rem;
+	text-align: center;
+}
+table.gouka td.umu{
+	width: 30%;
+	display: inline-block;
+	padding: 0.5rem;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+span.hissu{
+	display: inline-block;
+	min-width:5rem;
+	text-align: center;
+	background-color: #ff0000;
+	color: #ffffff;
+	font-weight: bold;
+	margin-left: 1rem;
+}
+
+span.jiyu{
+	display: inline-block;
+	min-width:5rem;
+	text-align: center;
+	background-color: #2179FC;
+	color: #ffffff;
+	font-weight: bold;
+	margin-left: 1rem;
+}
+
+table.point{
+	width:100%;
+	margin:  auto;
+	font-size: 1.4rem;
+	padding: 0.5rem;
+}
+
+
+table.point th{
+	width:100%;
+	padding: 1rem 1rem;
+	font-size: 1.4rem;
+	display: block;
+}
+
+
+table.point td{
+	display: block;
+	padding:0.5rem 0.5rem 3rem 0.5rem;
+}
+
+
+.heading{
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: 1rem 0.5rem;
+	border-bottom: 0.1rem dotted #000000;
+}
+
+/* button{
+	margin: 0 auto ;
+	width:95%;
+	font-weight:bold;
+	padding:2rem 1rem;
+	cursor:pointer;
+} */
+
+
+
+
+textarea{
+	padding:1rem;
+	font-size:1.5rem;
+	width:100%;
+	height: 20rem;
+}
+
+a.p-link{
+	width: 95%;
+	margin: 0 auto;
+	display: block;
+	padding: 2rem 0.5rem;
+}
+
+
+a.g-link{
+	width: 95%;
+	margin: 0 auto;
+	display: block;
+	padding: 2rem 0.5rem;
+	font-size: 2.5rem;
+}
+
+
+/*===========================================*/
+
+/*===================================*/
+
+
+/*===========================================*/
+
+.loop-box ul {
+  position: absolute; left: 0; top: 0;
+  display: block;
+  justify-content: space-between;
+  list-style: none;
+  max-height: 10000%;
+  min-height: 100%;
+  width: 100%;
+  animation: 50s linear infinite; /* アニメーション設定 - 変更可 */
+}
+
+.loop-box ul li {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+
+/*===========================================*/
+
+
+/*=====================================================
+footer
+=====================================================*/
+
+
+footer {
+/*	position: absolute;
+	bottom: 0;*/
+}
+
+.footer{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.footer ul{
+	text-align: center;
+	font-size: 1.3rem;
+}
+
+.footer ul li{
+	display: inline-block;
+	padding: 0.5rem;
+	text-align: center;
+	font-weight: normal;
+}
+
+.footer ul li a{
+	color: #ffffff;
+}
+
+
+.footer .copy{
+	font-size: 1.3rem;
+	color: #dddddd;
+	padding: 1rem 0.5rem;
+	text-align: center;
+}
+
+
+/*===========================================*/
+
+
+
+
+@keyframes zoomin {
+    0% {
+        opacity:0;
+        transform: scale(5, 5);
+		filter: drop-shadow(0px 0px 40px rgba(255,255,255,0));
+    }
+
+    20% {
+        opacity:0.5;
+        transform: scale(1.4, 1.4);
+    }
+    100% {
+        opacity:1;
+        transform: scale(1.0, 1.0);
+		filter: drop-shadow(0px 0px 30px rgba(255,255,255,1));
+    }
+}
+
+.fuwa {
+    animation-name: fuwa;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.1s;
+}
+
+@keyframes fuwa {
+    0% {
+        transform: translate(0,0px);
+    }
+
+    100% {
+        transform: translate(0,-5px)
+    }
+}
+
+
+
+/*===========================================*/
+
+
+
+/*===========================================*/
+.timer{
+	font-size: 1.6rem;
+}
+
+
+.timer .time{
+	font-size: 3rem;
+	margin-left: 0.5rem;
+	display: inline-block;
+	width: 4rem;
+	font-weight: bold;
+}
+
+/*===================================*/
+
+/************************************
+	eyecatch
+************************************/
+#eyecatch li {
+    width: 48%;
+}
+
+
+ul.last-number li{
+	padding: 1rem 2rem;
+	font-size: 1.8rem;
+}
+
+
+
+/*===================================*/
+/*===================================
+
+	Hit
+
+===================================*/
+/*===================================*/
+.cdt{
+	top: 615px;
+	margin-top:auto;
+}
+
+/* .cdt_outer{
+    width: 100%;
+    /*height: 580px;
+	height:50px;
+	margin: -14px auto 0;
+	position:relative;
+	padding:1px 0;
+	z-index:3;
+} */
+
+.cdt_outer{
+    width: 100%;
+    /* height: 580px; */
+	height: 120px;
+	/* height: 90px; */
+	margin: 0px auto 0;
+	position:relative;
+	padding:1rem 0;
+	z-index:3;
+}
+
+.cdt_center2{
+	height: 185px;
+}
+
+
+
+/* button {
+    font-size: 2rem;
+}
+
+.button2 {
+    font-size: 2rem;
+	width: 90%;
+} */
+
+/****************************/
+/*直近実績*/
+
+.result_t2{
+	width: 100%;
+}
+
+.result_t2 th {
+    font-size: 1.3rem;
+	padding: 0,0.2rem;
+}
+.result_t2 td {
+    padding: 0 0.3rem;
+    font-size: 1rem;
+}
+.result_t2 td.teki2 {
+    font-size: 1.6rem;
+}
+.result_t2 td.teki2 .fs20 {
+    font-size: 1rem;
+}
+
+.result_t2 td.hit {
+    font-size: 1.6rem;
+}
+
+/****************************/
+
+/************オリジナル馬券***********************/
+
+.baken_grid {
+	/*min-height: 150px;*/
+	width:75%;
+	min-height: 130px;
+	/*width: 100%;*/
+	margin: 0 auto;
+}
+
+.baken_grid2 {
+	/*min-height: 150px;*/
+	/*width:75%;*/
+	min-height: 130px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.baken_grid3 {
+	/*min-height: 150px;*/
+	/*width:75%;*/
+	min-height: 130px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.area01 { grid-area: area01;text-align:left;padding:1.5rem 0 0 1rem;font-size:1.3rem; }
+.area02 { grid-area: area02;padding-top:1.5rem;font-size:1.5rem;margin:0 auto; }
+.area03 { grid-area: area03;padding:0 1rem 1.5rem 0;font-size:1.5rem;font-weight:900;letter-spacing:-1px; }
+
+.area03.fs45 {font-size:2.4rem;}
+.main .baken_grid .tekichu{
+	padding:0.2rem 1rem;
+}
+
+.bd{max-width:50px;}
+
+.baken_grid .white_bg2{
+	min-width:120px;
+}
+
+.baken_grid2 .white_bg2{
+	min-width:120px;
+}
+
+.baken_grid3 .white_bg2{
+	min-width:120px;
+}
+
+/************オリジナル馬券 end***********************/
+
+
+/********** 特典ゾーン *******************************************
+*****************************************************************/
+.bene_num{
+	font-size:1.5rem;
+	width:100%;
+}
+.bene_num2{
+	font-size:1.5rem;
+	width:100%;
+}
+
+.bene_wrap {
+    width: 100%;
+}
+/********** 特典ゾーン end*******************************************
+*****************************************************************/
+
+.guide_t th{
+	width:100%;
+	display: block;
+	font-size:1.3rem;
+	margin-top: 0.6rem;
+}
+.guide_t td {
+	display: block;
+    font-size: 1.3rem;
+    padding:1rem;
+}
+
+.guide_t td .bene_num{
+    font-size: 1.3rem;
+}
+.guide_t td .bene_num2{
+    font-size: 1.3rem;
+}
+.guide_t td .bene_title{
+    padding:1rem 0;
+}
+
+.guide_t td .fs35 {
+    font-size: 1.6rem;
+}
+.guide_t td .fs30 {
+    font-size: 1.5rem;
+}
+.guide_t td .fs25 {
+    font-size: 1.4rem;
+}
+.guide_t td .fs22 {
+    font-size: 1.3rem;
+}
+.guide_t td .fs20 {
+    font-size: 1.2rem;
+}
+.guide_t td .fs18 {
+    font-size: 1.1rem;
+}
+.guide_t td .fs16 {
+    font-size: 1rem;
+}
+/**********************************/
+/**********************************/
+.guide_t2 th{
+	width:20%;
+	font-size:1.3rem;
+}
+.guide_t2 td {
+    font-size: 1.3rem;
+}
+
+
+.guide_t2 td .fs35 {
+    font-size: 1.6rem;
+}
+.guide_t2 td .fs30 {
+    font-size: 1.5rem;
+}
+.guide_t2 td .fs25 {
+    font-size: 1.4rem;
+}
+.guide_t2 td .fs22 {
+    font-size: 1.3rem;
+}
+.guide_t2 td .fs20 {
+    font-size: 1.2rem;
+}
+.guide_t2 td .fs18 {
+    font-size: 1.1rem;
+}
+
+
+
+
+/**********************************/
+/**********************************/
+.pay_fm label {
+	width:45%;
+	font-size: 1.4rem;
+	padding: 1rem;
+	border-radius:2rem;
+}
+.pay_fm input[type=radio] {
+    display:none;
+}
+.pay_fm input[type="text"] {
+    padding: 1rem;
+    font-size: 1.7rem;
+}
+.pay_fm input[type=radio]:checked+label {
+	border: solid 2px #C58505;
+}
+
+/**********************************/
+
+
+/****************************************/
+.paybtn .btn{
+	width:85%;
+	font-size:2.5rem;
+	padding:3rem 1rem;
+	border-radius: 4rem;
+}
+
+.paybtn .btn:hover{
+background-color: #0D801F;
+background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+	border-bottom:0.5rem groove transparent;
+	border-right:0.5rem groove transparent;
+	border-left:0.5rem groove transparent;
+	border-top:0.5rem groove transparent;
+    box-shadow: rgba(0, 17, 4, 0.2) 0px 12px 14px 0px inset;
+}
+/*******************************************/
+
+/*************サブヘッド ***************************/
+
+.background-img2{
+	padding-top:36%;
+  }
+  .main .background-img2 p{
+	padding: 0rem;
+  }
+  .main .background-img p{
+	padding: 0rem;
+  }
+  
+  .box .content .sheadtop{
+	font-size:1rem;
+  }
+  .box .content h2 {
+	  padding-top:0.5rem;
+  }
+  /**********************/
+  .sheadtop2{
+	font-size:0.6rem;
+	width:50%;
+	letter-spacing:-1px;
+  }
+  .sheadtop3{
+	font-size:0.6rem;
+	width:50%;
+	letter-spacing:-1px;
+  }
+  /*************サブヘッド end***************************/
+  .box2{
+	  padding:1.3rem;
+  }
+  .box2 .content{
+	  padding:2rem 0;
+  }
+  
+  .box3{
+	  padding:1.3rem;
+  }
+  .box3 .content2{
+	  padding:2rem 0;
+  }
+  
+  /*=========================*/
+
+.ex_box p{
+	padding:0;
+	font-size:1.3rem;
+}
+
+.bg_r_sure{
+	background-color: rgb(170 0 0);
+	color: rgb(255, 255, 255);
+	width: 100%;
+	padding: 3rem 0rem;
+	margin: 0 auto;
+	border-radius:3px;
+	text-align: center;
+	
+}
+
+.bg_bk_sure{
+	color: rgb(255, 255, 255);
+	width: 100%;
+	padding: 3rem 0rem;
+	margin: 0 auto;
+	border-radius:3px;
+	text-align: center;
+	
+}
+
+.bd_r{
+	border: 1.0rem solid rgb(170 0 0);
+	width: 90%;
+	padding: 0.5rem;
+}
+
+.bd_bk{
+	width: 90%;
+	padding: 0.5rem;
+}
+
+/****************************************/
+.mark_t2 th{
+	font-size:1rem;
+}
+.mark_t2 th.mark{
+	font-size:1rem;
+	width:18%;
+	padding:0;
+}
+.mark_t2 td{
+	padding:0 .2rem;
+	font-size:1rem;
+}
+.mark_t2 td.horse{
+	font-size:.6rem;
+	width:35%;
+}
+.mark_t2 td.marking{
+	font-size:1.5rem;
+}
+/****************************************/
+/****************************************/
+.mark_t3 th{
+	font-size:1rem;
+}
+.mark_t3 th.mark{
+	font-size:1rem;
+	width:54%;
+	padding:0;
+}
+.mark_t3 td{
+	padding:0 .2rem;
+	font-size:1rem;
+}
+.mark_t3 td.horse{
+	font-size:.6rem;
+	width:35%;
+}
+.mark_t3 td.marking{
+	font-size:1.5rem;
+}
+/****************************************/
+
+.balloon-005 {
+    padding: 1rem;
+	font-size: 24px;
+	width:70%;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+
+
+
+/*三角レーダーチャートの設定*/
+.radar-chart-001 {
+    max-width: 180px;
+}
+
+.radar-chart-001 dl > div:nth-child(1) {
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.radar-chart-001 dl > div:nth-child(2) {
+    bottom: 15%;
+    right: 5%;
+    transform: translateX(50%);
+}
+
+.radar-chart-001 dl > div:nth-child(3) {
+    bottom: 15%;
+    left: 5%;
+    transform: translateX(-50%);
+}
+
+
+
+/*** 満足度アンケート ***/
+table.anq_t td{
+	font-size: 1.1rem;
+}
+
+
+
+/*引用の設定*/
+.quote-2 {
+    padding: 1.25em 1.25em 1em 1.5em;
+}
+
+.quote-2::before,
+.quote-2::after {
+    width: 2em;
+    height: 2em;
+}
+
+.quote-2::before {
+    background-size: 1.25em;
+}
+
+
+
+ }
+
+/*********************************************
+	特設
+*********************************************/
+@media screen and (max-width: 1024px) { 
+.wrapper-left{
+	display: block;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	margin: 1rem auto 0;
+	border-right: 1px solid lightgoldenrodyellow;
+}
+
+.center-logo{
+	position: relative;
+    width: 100%;
+    height: 100%;
+	margin-top: 8vh;
+}
+
+.wrapper-right{
+	display: block;
+	width: 100%;
+	padding: 1rem;
+}
+
+.wrapper-right .flex-content{
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.localNav {
+    position: fixed;
+	right: 0;
+	top: 0;
+    z-index: 5;
+    width: 100%;
+    height: 8vh;
+    display: block;
+	background-color: rgba(0, 0, 20, 0.75);
+}
+
+
+#g-nav{
+  	width:80%;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+	top:8vh;
+	left:2vw;
+}
+
+/*スライダー*/
+.slider img {
+    width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:auto;
+}
+
+}
+
+
+
+/*********************************************
+	特設2
+*********************************************/
+@media screen and (max-width: 1024px) { 
+	.tv{display: block;}
+	.tvn{display: none;}
+
+	header.trick{
+		height: 6rem;
+	}
+
+	header.dragon{
+		position: sticky;
+		height: 5rem;
+		width: 100%;
+		padding: 0.5rem;
+		top: 0;
+		z-index: 999;
+	}
+	
+	.logo-kirin{
+		height: 6rem;
+	   display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	.logo-kirin img{
+		height: 5rem;
+		display: block;
+	}
+
+	/* .pc-menu,.pv{
+		display: none
+	} */
+
+	.sp-menu{
+		display: inline-block;
+		margin-right: 0.5rem;
+	}
+
+	.sp-menu .openbtn2{
+		position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+		background:#473400;
+		cursor: pointer;
+		width: 48px;
+		height:48px;
+		border-radius: 5px;
+		z-index: 9999999;
+	}
+	
+	/*ボタン内側*/
+	.sp-menu .openbtn2 span{
+	display: inline-block;
+	transition: all .4s;/*アニメーションの設定*/
+	position: absolute;
+	left: 14px;
+	height: 2px;
+	border-radius: 5px;
+	background: #fff;
+	width: 45%;
+	}
+	  
+	
+	.sp-menu .openbtn2 span:nth-of-type(1) {
+	top:12px; 
+	}
+	
+	.sp-menu .openbtn2 span:nth-of-type(2) {
+	top:18px;
+	}
+	
+	.sp-menu .openbtn2 span:nth-of-type(3) {
+	top:24px;
+	}
+	
+	.sp-menu .openbtn2 span:nth-of-type(3)::after {
+	content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
+	position: absolute;
+	top:5px;
+	left:-2px;
+	color: #fff;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	}
+	
+	/*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+	
+	.sp-menu .openbtn2.active span:nth-of-type(1) {
+		top: 14px;
+		left: 18px;
+		transform: translateY(6px) rotate(-45deg);
+		width: 30%;
+	}
+	
+	.sp-menu .openbtn2.active span:nth-of-type(2) {
+	opacity: 0;
+	}
+	
+	.sp-menu .openbtn2.active span:nth-of-type(3){
+		top: 26px;
+		left: 18px;
+		transform: translateY(-6px) rotate(45deg);
+		width: 30%;
+	}
+
+	.sp-menu .openbtn2.active span:nth-of-type(3)::after {
+		content:"Close";/*3つ目の要素のafterにClose表示を指定*/
+		transform: translateY(0) rotate(-45deg);
+		top:5px;
+		left:5px;
+	}
+
+	/* ナビゲーション */
+	#g-nav{
+		/*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+		position:fixed;
+		z-index: 999;
+		/*ナビのスタート位置と形状*/
+		  top:0;
+		right: -120%;
+		  width:100%;
+		height: 100vh;/*ナビの高さ*/
+		  background: rgba(27, 20, 0, 0.95);
+		/*動き*/
+		  transition: all 0.6s;
+	}
+	
+	/*アクティブクラスがついたら位置を0に*/
+	#g-nav.panelactive{
+		right: 0;
+	}
+	
+	/*ナビゲーションの縦スクロール*/
+	#g-nav.panelactive #g-nav-list{
+		/*ナビの数が増えた場合縦スクロール*/
+		position: fixed;
+		z-index: 999; 
+		width: 100%;
+		height: 100vh;/*表示する高さ*/
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	
+	/*ナビゲーション*/
+	#g-nav ul {
+		/*ナビゲーション天地中央揃え*/
+		position: absolute;
+		z-index: 999;
+	}
+
+	.sp-menu ul{
+			padding: 0.5rem;
+			width: 95%;
+		}
+
+		
+	.sp-menu ul li{
+		text-decoration: none;
+		list-style: none;
+		border-bottom: rgb(255, 246, 222) 1px solid;
+		padding: 0.2rem 0;
+		font-size: 1.4rem;
+		font-weight: bold;
+		font-family: 'Noto Serif JP', sans-serif;
+	}
+
+	.sp-menu ul li:hover{
+		background: rgba(255, 200, 200, 0.8);
+		color: goldenrod;
+	}
+
+	.sp-menu ul li a{
+		display: block;
+		color: #a30303;
+	}
+
+	.main-block{
+		display: block;
+		width: 100%;
+		margin: 2rem auto;
+	}
+	
+	.main-block .main-block-contents-left{
+		width: 100%;
+	}
+	
+	.main-block .main-block-contents-left .main-contents{
+		max-width: 98%;
+		margin: 0 auto;
+	}
+	
+	.main-block .main-block-contents-right{
+		width: 24rem;
+	}
+	
+	.main-block .main-block-contents-right .pc-menu{
+		width: 100%;
+		margin: 0 auto;
+		border: 1px solid silver;
+	}
+	
+	
+
+.sub-block .sub-grid{
+	display: block;
+	width: 98%;
+	margin: 0 auto;
+}
+
+.sub-block .sub-grid .sub-grid-contents{
+	margin: 1rem auto 0;
+}
+
+
+.play-area{
+	margin: 1rem auto 0;
+	width: 100%;
+}
+
+.controller {
+	position: relative;
+	width: 100%;
+	margin: 2rem auto 0;
+  }
+
+  /* .controller button {
+	line-height: 1.3;
+	border-radius: 5rem;
+	padding: 1rem 0;
+  } */
+
+  .controller .num {
+	width: 60%;
+  }
+
+
+
+
+/*-------------------------------------------
+  うまとみ
+-------------------------------------------*/
+
+.contact_bg table{
+	width:90%;
+	font-size:14px;
+	display:block;
+}
+
+.contact_bg table tbody{
+	display:block;
+}
+
+.contact_bg table tr{
+	display:block;
+}
+
+.contact_bg table th{
+	display:block;
+}
+
+.contact_bg table td{
+	display:block;
+	font-size:12px;
+}
+.form_every {
+    width: 100%;
+    padding: 1rem;
+    background: #001323;
+    border: groove 5px #2d1a00;
+}
+
+.tg4th_iframe {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 660px;
+    overflow: hidden;
+}
+
+/*-------------------------------------------*/
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------
+	田中
+-------------------------------------------*/
+
+.info_bg{
+	width:95%;
+	display:block;
+}
+
+.input_bg {
+	width:95%;
+	margin: 20px auto;
+	display:block;
+}
+
+.info_bg tbody{
+	display:block;
+}
+
+.info_bg tr{
+	display:block;
+}
+
+.info_bg th{
+	min-width:auto;
+	font-size:100%;
+	padding:5px 10px;
+	display:block;
+	width:100%;
+}
+
+.info_bg th .fs12.bold1{
+	font-size:12px;
+	display:block;
+}
+
+.info_bg th .fs12.bold1 br{
+	display:none;
+}
+
+.info_bg td{
+	padding:10px;
+	min-width:auto;
+	font-size:14px;
+	display:block;
+}
+
+.info_bg td p.fs14{font-size:12px;}
+
+
+.info_bg .pla_content-back{
+	width:100%;
+}
+
+.info_bg .card{
+	width:90%;
+}
+
+.koumoku{
+	font-size:16px;
+}
+
+/* .applicationButton {
+	width: 100%;
+	height: auto;
+	text-indent: -9999px;
+	background: url(../../../../image/member/project_s/nx_revolution/button_legende.png) left top / 100% no-repeat;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+	border: none;
+	text-align: center;
+	display:block;
+	margin:0 auto;
+	border-radius:10px;
+} */
+
+
+/*-------------------------------------------*/
+
+.res_flex_bg {
+	margin: 0 auto;
+}
+.res_flex_bg_n {
+	margin: 0 auto;
+	/* display: block; */
+	width: 100%;
+}
+
+.res_flex_bg2 {
+	display: block;
+	padding: 10px;
+	margin: 20px auto 0;
+}
+
+.res_flex_text {
+	width: 100%;
+	margin-right: 0;
+}
+
+.res_flex_list {
+	width: 95%;
+	margin: 10px auto;
+	max-width: 280px;
+	max-height:150px ;
+	min-height: 150px;
+}
+
+.res_flex_list_n {
+	width: 95%;
+	margin: 10px auto;
+	max-width: 280px;
+	max-height:150px ;
+	min-height: 150px;
+}
+
+.res_flex_list_test1{
+	font-size:12px;
+	width:100px;
+}
+
+.res_flex_list_test2{
+	font-size: 11px;
+	width: 20%;
+	border:1px solid #000;
+	border-top:10px solid #000;
+	border-bottom:10px solid #000;
+	background:#FFF;
+}
+
+.res_flex_list:nth-child(2n) {
+	margin: 10px auto;
+}
+
+
+.res_flex_bg2 .res_flex_list {
+	width: 100%;
+	max-width: 220px;
+}
+
+.res_flex_bg.kotei .res_flex_list {
+	width: 100%;
+	max-width: 220px;
+	padding: 20px 10px;
+	margin: 0 auto 10px;
+	min-height: 150px;
+}
+
+.res_flex_bg.kotei .res_flex_list .res_flex_list_test1 {
+	font-size: 12px;
+	width: 49px;
+}
+
+.res_flex_bg.kotei .res_flex_list .res_flex_list_test2 {
+	font-size: 11px;
+}
+
+.res_flex_bg.kotei .res_flex_list .res_flex_list_test3 {
+	font-size: 14px;
+}
+
+.res_flex_bg.kotei .res_flex_list .res_flex_list_test3 .kakutoki span {
+	font-size: 17px;
+}
+
+.res_flex_bg.kotei .res_flex_list .bakentekichu {
+	right: 10px;
+}
+
+.kotei_flex {
+	display: block;
+	padding: 10px;
+}
+
+
+
+.res_flex_list.bigs {
+	width: 100%;
+	max-width:260px;
+	margin: 0 auto;
+}
+
+.res_flex_list.bigs .res_flex_list_test1{
+	font-size: 12px;
+	width: 25%;
+}
+
+.res_flex_list.bigs .res_flex_list_test2{
+	font-size: 16px;
+	width: 30px;
+	border:1px solid #000;
+	border-top:10px solid #000;
+	border-bottom:10px solid #000;
+	background:#FFF;
+}
+
+.res_flex_list.bigs .res_flex_list_test3{
+	font-size: 17px;
+	width: auto;
+}
+
+.res_flex_list.bigs .res_flex_list_test3 .kakutoki span{
+	font-size: 25px;
+}
+
+
+.res_flex_list.bigs .bakentekichu img {
+	width: 120px;
+}
+
+
+/*-------------------------------------------*/
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+#footer{
+	width: 100%;
+	margin: 0px auto 0 auto;
+	color: #ffffff;
+	font-size: 13px;
+	letter-spacing: 5px;
+	padding-top:10px;
+	padding-bottom:10px;
+	background:#000000;
+	background:url(../../../../image/member/project_s/ex_kaiseki_all/gold.gif) #000 top center repeat-x;
+	box-shadow: 0 0 3px 2px #e01b1b, 0 0 20px 1px #ff0000;
+}
+
+.top a{
+	width:100%;
+	margin:10px 0 0 0;
+	display:block;
+	background:#222222;
+	font-size:14px;
+}
+
+.top a:hover{
+	width:100%;
+	background:#555555;
+	display:block;
+	color:#FFFFFF;
+}
+
+#footer p{
+	font-size:10px;
+	width:90%;
+	margin:10px auto;
+}
+
+/*-------------------------------------------*/
+
+/*-------------------10億要項-------------------*/
+
+.youkou_t {
+	width:98%;
+	font-size:12px;
+}
+.youkou_t th{
+	display: block;
+	width:100%;
+	padding:0.5rem 0;
+}
+.youkou_t td{
+    display: block;
+	width:100%;
+	padding:0.5rem;
+}
+.youkou_t td .fs16 {
+    font-size: 1rem;
+}
+.youkou_t td .fs18 {
+    font-size: 1rem;
+}
+.youkou_t td .fs20 {
+    font-size: 1.2rem;
+}
+.youkou_t td .fs25 {
+    font-size: 1.5rem;
+}
+.youkou_t td .fs70 {
+    font-size: 3rem;
+}
+
+.youkou_t .emo_box6 {
+    padding: 0.5rem 0rem;
+}
+.youkou_t .hatena_box4 {
+    padding: 0.5rem 0rem;
+	border-top: 0.3rem solid #FDD78F;
+	border-bottom: none;
+	border-right: none;
+	border-left: none;
+}
+.youkou_t .hatena_box5 {
+    padding: 0.5rem 0rem;
+}
+.youkou_t .hatena_box6 {
+    padding: 0.5rem 0rem;
+}
+
+.form_ifm2 {
+	padding: 1rem 0.5rem;
+    font-size: 1.4rem;
+}
+input[type="text"] {
+    padding: 1rem 0.5rem;
+	font-size: 1.4rem;
+}
+
+input[type="email"] {
+    padding: 1rem 0.5rem;
+	font-size: 1.4rem;
+}
+
+.onebillion_subhead_god02{
+	width:92%;
+}
+
+/*-------------------要項ここまで-------------------*/
+
+
+
+}
+
+/* @media screen and (max-width: 425px) { 
+	#roulette {
+		top: 0%;
+		left: 5%;
+	  }
+  } */
