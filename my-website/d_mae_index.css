@@ -8605,13 +8605,9 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
         background: linear-gradient(to bottom, #ffe066, #ffc90e); /* グラデーション */
         color: #000;
         margin-bottom: 15px; /* 注意書きとのマージン */
-		font-size:3rem
+		
     }
-@media screen and (min-width: 769px) {
-  .submit-button {
-    font-size:2rem
-  }
-}
+
 .ms-fv-section {
     position: relative;
     width: 100%;
@@ -9273,6 +9269,23 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
     border-color: transparent;
     z-index: -1; /* 三角形の後ろに配置 */
   }
+
+@media (max-width: 768px) {
+  /* 外側のラップ：余白の調整 */
+  .ms-system-triangle-wrapper {
+    margin-top: -1px; /* 隙間防止を維持 */
+  }
+
+  /* 三角形本体：サイズをスマホに最適化 */
+  .ms-system-triangle {
+    /* 左右を合計 100vw（画面いっぱい）以下に抑える */
+    /* ここでは左右 40vw（計80%）程度にして、少しスリムにしています */
+    border-width: 30px 40vw 0 40vw; 
+    
+    /* アニメーションが激しすぎるとタップしづらいので、動きを少し小さくする場合 */
+    animation-duration: 1.5s;
+  }
+}
 
   .vo-section-container {
     width: 100%;
