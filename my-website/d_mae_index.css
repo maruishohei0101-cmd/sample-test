@@ -4583,7 +4583,6 @@ input[type="email"]{
 button{
 	margin: 0 auto ;
 	width:100%;
-	font-size:4rem;
 	font-weight:bold;
 	padding:3rem 1rem;
 	border-radius: 7rem;
@@ -8606,6 +8605,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
         background: linear-gradient(to bottom, #ffe066, #ffc90e); /* グラデーション */
         color: #000;
         margin-bottom: 15px; /* 注意書きとのマージン */
+		font-size:3rem
     }
 @media screen and (min-width: 769px) {
   .submit-button {
