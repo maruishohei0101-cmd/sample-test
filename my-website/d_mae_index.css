@@ -8607,6 +8607,11 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
         color: #000;
         margin-bottom: 15px; /* 注意書きとのマージン */
     }
+@media screen and (min-width: 769px) {
+  .submit-button {
+    font-size:2rem
+  }
+}
 .ms-fv-section {
     position: relative;
     width: 100%;
