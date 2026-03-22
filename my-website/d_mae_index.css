@@ -8773,9 +8773,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
     flex-direction: row; /* デスクトップは横並び */
     gap: 30px;
     /* align-items: flex-start; */
-	background-color: #FFFFFF;
-	border-radius: 30px;
-	padding: 40px;
+	
   }
 
   /* 左カラム：タイトルとメイン画像 */
