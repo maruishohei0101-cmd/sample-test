@@ -8451,7 +8451,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
 
 
 /* ---------- セクション全体 ---------- */
-.kpi-section{max-width:1200px;margin:auto;padding:24px}
+.kpi-section{max-width:1200px;margin:auto;}
 .kpi-card{display:grid;gap:0;background:white;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.06)}
 
 
@@ -9013,7 +9013,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
     }
 
     .lp-point-text-box {
-      width: 90%;
+      width: 100%;
       margin: -30px auto 0; /* 画像に少し被せる演出 */
       padding: 30px 20px 20px;
     }
