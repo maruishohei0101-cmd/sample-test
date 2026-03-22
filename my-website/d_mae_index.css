@@ -8990,6 +8990,10 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
     position: relative;
     z-index: 1;
   }
+@media (max-width: 768px) {
+	.lp-point-title{
+		padding-top:20px;}
+}
 
   .lp-point-description {
     color: #444;
