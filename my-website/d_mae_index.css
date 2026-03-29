@@ -64,10 +64,9 @@ body{
 }
 
 body::before {
-	background-color: #fefefe;
-	background-image: url("image/bg30
-		.png"); 
-	background-image:url(image/bg5.png);
+	background-color: red;
+	/* background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png"); */
+	background-image:url(/Users/maruishouhei/Desktop/my-website/image/bg30.png);
 	background-repeat:no-repeat no-repeat;
 	background-position:center center;
 
@@ -98,6 +97,10 @@ body::before {
 	}
  }
 
+.main-content {
+  width: 980px;     /* 幅を1000pxに固定 */
+  margin: 0 auto;    /* 左右の余白を自動で均等にして中央に配置 */
+}
 
 .yu{font-family:"游ゴシック Medium","游ゴシック体","Yu Gothic Medium",YuGothic,"ヒラギノ角ゴ ProN","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;	}
 .mr{font-family: "メイリオ","Meiryo","Osaka","MS Pゴシック","MSゴシック",Helvetica,verdana,arial;}
@@ -2675,8 +2678,8 @@ input[type="text"]{
 
 input[type="email"]{
 	width: 75%;
-	padding:1.5rem 1rem;
-	font-size:2rem;
+	/* padding:1.5rem 1rem;
+	font-size:2rem; */
 /*	color:#000000;
 	font-weight:bold;
 	text-align: center;
@@ -4538,8 +4541,8 @@ input[type="text"]{
 
 input[type="email"]{
 	width:100%;
-	padding:2rem 1rem;
-	font-size:2.3rem;
+	/* padding:2rem 1rem;
+	font-size:2.3rem; */
 	color:#000000;
 	font-weight:bold;
 	border:0.2rem double #7D342E;
@@ -4584,6 +4587,7 @@ input[type="email"]{
 button{
 	margin: 0 auto ;
 	width:100%;
+	font-size:4rem;
 	font-weight:bold;
 	padding:3rem 1rem;
 	border-radius: 7rem;
@@ -8452,7 +8456,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
 
 
 /* ---------- セクション全体 ---------- */
-.kpi-section{max-width:1200px;margin:auto;}
+.kpi-section{max-width:1200px;margin:auto;padding:24px}
 .kpi-card{display:grid;gap:0;background:white;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.06)}
 
 
@@ -8575,6 +8579,8 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
     display:none;
   }
 }
+
+
 
    /* 1. 光る外周ボーダーのコンテナ */
 .lp-shine-wrap {
@@ -8773,7 +8779,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
   /* 既存のCSSに「縁取り」と「浮遊感」を追加 */
   .payout-container {
     width: 100%;
-	background-image:url(image/head_bg.png);
+	background-image:url(/Users/maruishouhei/Desktop/my-website/image/head_bg.png);
     /* 金色の縁取りをより豪華に（二重線風） */
     position: relative;
     overflow: hidden;
@@ -9749,7 +9755,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
             max-width: 500px;
             height: 300px;
             background-color: #1a1a1a;
-            background-image: url('image/bakebg.png');
+            background-image: url('/Users/maruishouhei/Desktop/my-website/image/bakebg.png');
             background-size: cover;
             position: relative;
             padding: 30px;
@@ -9918,5 +9924,3 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
                 font-size: 13px;
             }
         }
-.area-rt{background-color: #A51111;}
-
