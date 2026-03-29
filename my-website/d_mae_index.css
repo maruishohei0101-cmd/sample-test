@@ -65,7 +65,8 @@ body{
 
 body::before {
 	background-color: #fefefe;
-	/* background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png"); */
+	background-image: url("image/bg30
+		.png"); 
 	background-image:url(image/bg5.png);
 	background-repeat:no-repeat no-repeat;
 	background-position:center center;
@@ -8575,39 +8576,154 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
   }
 }
 
+   /* 1. 光る外周ボーダーのコンテナ */
+.lp-shine-wrap {
+    position: relative;
+    max-width: 80%; /* PCでの最大幅 */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px; /* 光るラインが見える隙間 */
+    background: #111; /* 外側の暗い背景 */
+    border-radius: 40px;
+    overflow: hidden; /* はみ出した光を隠す */
+    box-shadow: 0 0 30px rgba(255, 221, 0, 0.3); /* 全体の淡い光 */
+}
 
+/* 2. ボーダーを回る光の正体 (疑似要素) */
+.lp-shine-wrap::before {
+    content: '';
+    position: absolute;
+    width: 200%; /* コンテナより大きく */
+    height: 200%;
+    background: conic-gradient(
+        transparent, 
+        #ffdd00, /* 光の色1（黄色） */
+        #ff3b3b, /* 光の色2（赤） */
+        transparent 30%
+    );
+    top: -50%;
+    left: -50%;
+    animation: rotate-border 4s linear infinite; /* アニメーション */
+    z-index: 1;
+}
 
-    .form-container {
-        background-color: #435b3e; /* 背景色 */
-        padding: 30px 20px 20px; /* 上部と下部に十分なパディング */
-        border-radius: 40px; /* 角丸 */
-        text-align: center;
-        color: white;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 軽い影 */
-    }
-    .input-field {
-        width: 100%;
-        padding: 15px;
-        border: none;
-        border-radius: 25px; /* 大きな角丸 */
-        font-size: 18px;
-        margin-bottom: 20px; /* ボタンとのマージン */
-        color: #888;
-        background-color: white;
-    }
-    /* 登録ボタン（黄色グラデーション） */
-    .submit-button {
-        width: 80%;
-        padding: 20px;
-        border: none;
-        border-radius: 10px; /* 大きな角丸 */
-        cursor: pointer;
-        background: linear-gradient(to bottom, #ffe066, #ffc90e); /* グラデーション */
-        color: #000;
-        margin-bottom: 15px; /* 注意書きとのマージン */
-		
-    }
+/* 3. 実際のコンテンツコンテナ (既存を改良) */
+.lp-shine-wrap .form-container {
+    background-color: #222; /* より暗くして光を引き立てる */
+    background-image: radial-gradient(#333 1px, transparent 1px); /* うっすらとしたドットパターン */
+    background-size: 20px 20px;
+    padding: 40px 30px 30px;
+    border-radius: 35px; /* 少し小さく */
+    position: relative;
+    z-index: 2; /* 光の上に配置 */
+    color: white;
+}
 
+/* 4. タイトルエリアの調整 */
+.lp-form-title {
+    margin-bottom: 30px;
+}
+.lp-form-title span.fs30 {
+    font-weight: bold;
+}
+.arrow-down {
+    display: block;
+    font-size: 1.5rem;
+    color: #ffdd00;
+    margin-top: 10px;
+    animation: arrow-bounce 1s infinite alternate;
+}
+
+/* 5. メール入力欄の改良 */
+.input-field {
+    width: 100%;
+    max-width: 80%;
+    padding: 18px 25px;
+    border: 2px solid #444; /* 暗いボーダー */
+    border-radius: 50px; /* 完全な丸み */
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: white;
+    background-color: rgba(255,255,255,0.1); /* 半透明 */
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+.input-field:focus {
+    outline: none;
+    border-color: #ffdd00;
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 0 0 15px rgba(255, 221, 0, 0.4);
+}
+.input-field::placeholder {
+    color: #aaa;
+}
+
+/* 6. 登録ボタンの改良（グラデーション＋光） */
+.submit-button {
+    width: 100%;
+    max-width: 450px;
+    padding: 22px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ffeb3b, #ff9800); /* 鮮やかなグラデ */
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden; /* ボタン内の光を隠す */
+    box-shadow: 0 5px 0 #c67600; /* 立体感 */
+    transition: all 0.1s;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+}
+.submit-button:active {
+    transform: translateY(3px); /* 押し込む効果 */
+    box-shadow: 0 2px 0 #c67600;
+}
+
+/* 7. ボタンを通過する閃光エフェクト */
+.lp-btn-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    animation: btn-shine 3s infinite;
+}
+
+/* 注意書き */
+.note-text {
+    font-size: 14px;
+    color: #ccc;
+    opacity: 0.8;
+}
+
+/* --- アニメーション定義 --- */
+
+/* ボーダーラインを光が回る */
+@keyframes rotate-border {
+    100% { transform: rotate(360deg); }
+}
+
+/* 矢印がピコピコ動く */
+@keyframes arrow-bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(5px); }
+}
+
+/* ボタンを閃光が走る */
+@keyframes btn-shine {
+    100% { left: 150%; }
+}
 .ms-fv-section {
     position: relative;
     width: 100%;
@@ -8657,7 +8773,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
   /* 既存のCSSに「縁取り」と「浮遊感」を追加 */
   .payout-container {
     width: 100%;
-    background: #A51111;
+	background-image:url(image/head_bg.png);
     /* 金色の縁取りをより豪華に（二重線風） */
     position: relative;
     overflow: hidden;
@@ -8745,6 +8861,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
       height: 60px;
       width: 180%;
     }
+    .payout-wrapper {
     }
 	.payout-main {
     gap: 10px;
@@ -8761,10 +8878,11 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 30px;
     padding: 40px;
     box-sizing: border-box;
+    /* フォント種類・サイズは指定なし */
   }
 
   /* レイアウトのベース */
@@ -8773,7 +8891,6 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
     flex-direction: row; /* デスクトップは横並び */
     gap: 30px;
     /* align-items: flex-start; */
-	
   }
 
   /* 左カラム：タイトルとメイン画像 */
@@ -8932,18 +9049,20 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
 
   .lp-point-section {
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     /* background-color: #f9f9f9;  */
-    padding: 50px 20px;
+    padding: 30px 10px;
   }
 
   /* 各ポイントの列（フレックス） */
   .lp-point-row {
     display: flex;
     align-items: center;
-    gap: 40px;
-    margin-bottom: 80px;
+    gap: 20px;
+    margin-bottom: 20px;
+	background-color: #f9f9f9;
+	border-radius: 20px;
   }
 
   /* 偶数番目の列は左右反転（デスクトップ） */
@@ -8975,7 +9094,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
   /* 背景の「Point 01」などの大きな数字（フォントサイズ指定なし） */
   .lp-point-bg-number {
     position: absolute;
-    top: -0.5rem;
+    top: 1rem;
     right: 10px;
     color: rgba(212, 175, 55, 0.20); /* 薄いゴールド */
     font-family: serif;
@@ -8990,10 +9109,6 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
     position: relative;
     z-index: 1;
   }
-@media (max-width: 768px) {
-	.lp-point-title{
-		padding-top:20px;}
-}
 
   .lp-point-description {
     color: #444;
@@ -9017,7 +9132,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
     }
 
     .lp-point-text-box {
-      width: 100%;
+      width: 90%;
       margin: -30px auto 0; /* 画像に少し被せる演出 */
       padding: 30px 20px 20px;
     }
@@ -9039,7 +9154,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+    /* background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); */
     opacity: 0.1;
     pointer-events: none;
   }
@@ -9271,23 +9386,6 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
     border-color: transparent;
     z-index: -1; /* 三角形の後ろに配置 */
   }
-
-@media (max-width: 768px) {
-  /* 外側のラップ：余白の調整 */
-  .ms-system-triangle-wrapper {
-    margin-top: -1px; /* 隙間防止を維持 */
-  }
-
-  /* 三角形本体：サイズをスマホに最適化 */
-  .ms-system-triangle {
-    /* 左右を合計 100vw（画面いっぱい）以下に抑える */
-    /* ここでは左右 40vw（計80%）程度にして、少しスリムにしています */
-    border-width: 30px 40vw 0 40vw; 
-    
-    /* アニメーションが激しすぎるとタップしづらいので、動きを少し小さくする場合 */
-    animation-duration: 1.5s;
-  }
-}
 
   .vo-section-container {
     width: 100%;
@@ -9590,3 +9688,235 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Aria
       padding: 0.8em 1.5em;
     }
   }
+  
+
+   .gyaku2 {
+    margin-top: -200px; /* ★ topの代わりにこちらを使う */
+    position: relative; /* z-indexを効かせるために残しておく */
+    z-index: 0;
+}
+
+ @media (max-width: 768px) {
+    .gyaku2 {
+    margin-top: -150px; 
+    }
+ }
+.zz2{
+	 position: relative;
+	z-index: 2;
+}
+
+.area-sai{
+	 width: 100%;
+    margin: 0 auto;
+    background: radial-gradient(circle at center, #001529 0%, #000000 100%); /* 深海のダークブルー */
+    overflow: hidden;
+	border-radius: 20px 20px 0px 0px;
+}
+
+:root {
+            --gold-gradient: linear-gradient(to bottom, #f9e698 0%, #d4af37 50%, #b8860b 100%);
+            --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* --- レイアウト用の設定 --- */
+        .result-wrapper {
+            display: grid;
+            gap: 5px; /* カード同士の間隔 */
+            padding: 20px;
+            justify-content: center;
+        }
+
+        /* PC版：横に2つ並べる */
+        @media (min-width: 1024px) {
+            .result-wrapper {
+                grid-template-columns: repeat(2, 450px);
+            }
+        }
+
+        /* SP版：1つで下に並ぶ（デフォルト） */
+        @media (max-width: 1023px) {
+            .result-wrapper {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+
+        /* --- 各カードのデザイン（提供コードの調整） --- */
+        .result-card {
+            width: 100%; /* 親のグリッド幅に合わせる */
+            max-width: 500px;
+            height: 300px;
+            background-color: #1a1a1a;
+            background-image: url('image/bakebg.png');
+            background-size: cover;
+            position: relative;
+            padding: 30px;
+            box-sizing: border-box;
+            border: 3px solid #d4af37;
+            font-family: sans-serif;
+            color: #fff;
+            overflow: hidden;
+            /* 複数並んだ時に浮き上がるように少し影を追加 */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .race-info {
+            font-weight: bold;
+            line-height: 1.4;
+            text-shadow: var(--text-shadow);
+        }
+
+        .date { font-size: 1.5rem; }
+        .track { font-size: 1.5rem; }
+        .class-name { font-size: 1.5rem; }
+
+        .ticket-type {
+            margin-top: 10px;
+            font-size: 2rem;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+            display: inline-block;
+        }
+
+        .logo-area {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+        }
+
+        .logo-area img { width: 100%; }
+
+        .bake {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            text-align: right;
+            width: 100%;
+        }
+
+        .amount {
+            font-size: 6rem; /* 10remだと枠をはみ出すため調整 */
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-end;
+            padding-right: 10px;
+        }
+
+        .amount span {
+            font-size: 1.5rem;
+            -webkit-text-fill-color: #d4af37; /* 単位は見やすく単色に */
+            margin: 0 5px;
+        }
+
+        .result-card::before {
+            content: '';
+            position: absolute;
+            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            pointer-events: none;
+        }
+
+		.lp-custom-navbar {
+            background-color: #000;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: flex-end; /* 右寄せ */
+            align-items: center;
+            gap: 12px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        /* --- 黄色のボタン共通設定 --- */
+        .lp-custom-btn {
+            background-color: #ffdd00;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            white-space: nowrap; /* 改行防止 */
+            transition: opacity 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lp-custom-btn:hover {
+            background-color: #ffe600;
+            opacity: 0.9;
+        }
+
+        /* --- モーダル（ポップアップ） --- */
+        .lp-custom-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.75);
+            z-index: 9999;
+            backdrop-filter: blur(2px); /* 背景を少しぼかす */
+        }
+
+        .lp-custom-modal-content {
+            display: none;
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            width: 90%;
+            max-width: 400px; /* PCでの最大幅 */
+            padding: 30px;
+            border-radius: 12px;
+            z-index: 10000;
+            box-sizing: border-box;
+        }
+
+        .lp-custom-modal-content h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .lp-custom-input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px; /* スマホでズームされないためのサイズ */
+        }
+
+        .lp-custom-close {
+            position: absolute;
+            top: 10px; right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        /* --- スマホ向けの調整 --- */
+        @media (max-width: 480px) {
+            .lp-custom-navbar {
+                justify-content: center; /* スマホでは中央寄せ */
+                padding: 10px;
+            }
+            .lp-custom-btn {
+                flex: 1; /* ボタンを均等幅に */
+                padding: 12px 10px;
+                font-size: 13px;
+            }
+        }
+.area-rt{background-color: #A51111;}
+
