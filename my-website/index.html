@@ -22,107 +22,136 @@
 </head>
 <body>
 
-   
-   
+    <style>
+        /* メイン領域を1000px・中央揃えにする設定 */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .main-content {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            overflow: hidden; /* はみ出し防止 */
+            background-color: #fff;
+        }
 
-    <div id="header" class="">
-        <div class="ms-fv-section">
-        <p class="p0 center">
-            <img src="image/pc_head.png" class="pv img100 w100 center" alt="">
-        </p>
-        <p class="p0 center">
-            <img src="image/sp_head.png" class="sv img100 w100 center" alt="">
-        </p>
-        </div>
-    </div>
-    <div class="payout-wrapper">
-        <div class="payout-container">
-            <div class="area-main">
-            <div class="area-box-g area-p5">
-             <div class="area-box-rd area-p10">
-            <p class="race-info p0 fs30 bld">2月22日（日）東京9R：的中！</p>
+        /* Swiperコンテナのはみ出し対策 */
+        .testimonials-swiper {
+            overflow: hidden;
+        }
+        /* スライドが高さに合わせて伸びるように */
+        .swiper-slide {
+            height: auto;
+        }
+        /* 既存カードの見た目を維持（必要に応じて） */
+        .testimonial-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+<body>
 
-            <div class="payout-main">
-                <div class="bet-tag-vertical">
-                    <span class="mincho4">三連単</span>
-                </div>
+    <div class="main-content">
+        <header class="lp-custom-navbar">
+        <button class="lp-custom-btn" onclick="lpControlModal('login', 'open')">ログイン</button>
+        <button class="lp-custom-btn" onclick="lpControlModal('signup', 'open')">新規会員登録</button>
+    </header>
 
-                <div class="amount-group">
-                    <p class="payout-amount p0 fs100 mincho4">
-                    12<span class="fs40">万</span>4,890<span class="fs40">円</span>
-                    </p>
-                </div>
-            </div>
-            <div class="area-main">
-            <div class="result-text-container center area-p30">
-            今週は <span class="result-text-highlight fs30">16 人</span>が【人生逆転】しました
-            </div>
-            </div>
-            </div></div></div>
-             <div class="area-main">
-                <p class="bld fs40 wt p0 m20 lh1 center"><span class="un-w">負け続けた人ほど、</span><br>ここでは勝てる理由とは！？</p>
-                <div class="form-container center m30">
-                    <p class="p0 lh12">
-                        その<span class="mincho4 red fs30 ylshadow2">秘密</span>と共に、<br>
-                        今週末<span class="mincho4 yellow fs30">フェブラリーS（G3）</span>の<br>
-                        <span class="mincho4 yellow fs30">無料予想を公開中！</span> ▼
-                    </p>
-                    <input type="email" classs="input-field" placeholder="メールアドレスを入力">
-                    <button type="submit" class="submit-button m20">今すぐ無料予想を受け取る▶︎</button>
-                    <p class="note-text p0">※登録は1分で完了します</p>
-                </div>
-            </div>
-        </div>
+    <div class="lp-custom-modal-overlay" id="lpOverlay" onclick="lpControlModal('', 'close')"></div>
+
+    <div class="lp-custom-modal-content" id="lpLoginContent">
+        <span class="lp-custom-close" onclick="lpControlModal('', 'close')">&times;</span>
+        <h2>ログイン</h2>
+        <input type="email" class="lp-custom-input" placeholder="メールアドレス">
+        <input type="password" class="lp-custom-input" placeholder="パスワード">
+        <button class="lp-custom-btn" style="width: 100%; margin-top: 15px;">ログインする</button>
     </div>
 
-   
-    <p class="p0 center" style="background-color: #A51111;">
-            <img src="image/pc_pl.png" class="pv img100 w100 center" alt="">
-        </p>
-        <p class="p0 center">
-            <img src="image/sp_pl.png" class="sv img100 w100 center" alt="">
-        </p>
-    <!-- 以降のコンテンツ -->
-        <img src="image/zero.png" class="img100 w100 center" alt="">
+    <div class="lp-custom-modal-content" id="lpSignupContent">
+        <span class="lp-custom-close" onclick="lpControlModal('', 'close')">&times;</span>
+        <h2>新規会員登録</h2>
+        <p class="p0" style="font-size: 14px; color: #666; text-align: center;">メールアドレスを入力してください</p>
+        <input type="email" class="lp-custom-input" placeholder="example@mail.com">
+        <button class="lp-custom-btn" style="width: 100%; margin-top: 15px;">登録メールを送信</button>
+    </div>
+
+        <div id="header" class="">
+            <div class="ms-fv-section">
+                <p class="p0 center">
+                    <img src="image/sp_head2.png" class="img100 w100 center" alt="">
+                </p>
+            </div>
+        </div>
+
+        <div class="payout-wrapper">
+            <div class="payout-container">
+                <div class="area-main">
+                    <div class="area-box-g area-p5">
+                        <div class="area-box-rd area-p10">
+                            <p class="race-info p0 fs30 bld">2月22日（日）東京9R：的中！</p>
+
+                            <div class="payout-main">
+                                <div class="bet-tag-vertical">
+                                    <span class="mincho4">三連単</span>
+                                </div>
+                                <div class="amount-group">
+                                    <p class="payout-amount p0 fs100 mincho4">
+                                        12<span class="fs40">万</span>4,890<span class="fs40">円</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="area-main">
+                                <div class="result-text-container center area-p30">
+                                    今週は <span class="result-text-highlight fs30">16 人</span>が【人生逆転】しました
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="area-main">
+                    <p class="bld fs40 wt p0 m20 lh1 center"><span class="un-w">負け続けた人ほど、</span><br>ここでは勝てる理由とは！？</p>
+                    <div class="lp-shine-wrap m30">
+                        <div class="form-container center">
+                            <p class="p0 lh12 lp-form-title">
+                                その<span class="mincho4 red fs30 ylshadow2">秘密</span>と共に、<br>
+                                今週末<span class="mincho4 yellow fs30">フェブラリーS（G3）</span>の<br>
+                                <span class="mincho4 yellow fs30">無料予想を公開中！</span> <span class="arrow-down">▼</span>
+                            </p>
+                            
+                            <input type="email" class="input-field" placeholder="メールアドレスを入力">
+                            
+                            <button type="submit" class="submit-button lp-btn-shine">
+                                <span class="btn-text">今すぐ無料予想を受け取る ▶︎</span>
+                            </button>
+                            
+                            <p class="note-text p0">※登録は1分で完了します</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="area-box-g area-p5">
             <div class="area-box-rd area-p10 center">
                 <div class="area-box-y rdshadow2 fs50 bld area-p40">
-                    <span class="yellow">毎週末が、<br class="sb">人生逆転のチャンス！</span>
+                    <span class="yellow">毎週末が、人生逆転のチャンス！</span>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="flash-transition"></div>
-    <div class="wrapper" id="wrapper">
-        <section class="aging-section m30">
-            <div class="aging-container">
-
-                <p class="aging-subtitle p0 fs30"><span class="red fs50">こんな悩み</span>はありませんか？</p>
-                <div class="empathy-grid">
-
-                    <div class="aging-list bl">
-                        <p class="aging-item p0 fs20"><span class="marker">何時間も真剣に予想したのに</span><br class="sb">的中しなかった。</p>
-                        <p class="aging-item p0 fs20"><span class="marker">色々な予想サイトを使っても</span>、<br class="sb">全然勝てなかった。</p>
-                        <p class="aging-item p0 fs20"><span class="marker">当たってもトリガミで</span>、<br class="sb">資金は減る一方。</p>
-                        <p class="aging-item p0 fs20"><span class="marker">的中しているサービスに課金したのに</span>、<br class="sb">不的中。</p>
-                    </div>
-                    <div class="empathy-col--image">
-                        <img class="empathy-figur w80" alt="" src="image/i5.png"/>
-                    </div>
-
+        
+        <img src="image/naya.png" class="img100 w100 center" alt="">
+                <div class="zz2">
+                    <img src="image/s2.png" class="img100 w100 center" alt="">
                 </div>
-            </div>
-        </section>
-               <img src="image/s2.png" class="img100 w100 center" alt="">
-
-
+        <div class="area-rt br20 gyaku2 m100" style="border: #A51111 solid 5px;">
             <div class="center pb20">
-            <p><span class="green fs60 bld">たった2,3分。<br class="sb">指先ひとつの操作で、</span></p>
-
-            <p class="mincho4 fs30 m50 p0">毎週多くの会員様の<br>
-            <span class="fs40 marker red area-p5 br10">人生がひっくり返っています。</span>
-            </p>
+               
+                <div class="m150"><img src="image/bg5.png" class="img100 w100 center" alt=""></div>
             </div>
             <div class="ms-section-container" style="background-color: #FFFFFF;border-radius: 30px;padding: 40px;">
                 <div class="ms-flex-row">
@@ -266,100 +295,86 @@
                 </div>
             </div>
         </div>
-        <p class="fs60 bld center lh1 green ylshadow2">「逆転ジャンボ」なら<br>
-        逆転できる<span class="fs80 bld">4つの理由</span></p>
-
-        <div class="area-yl area-p30">
-            <div class="lp-point-section">
+         <div class="zz2">
+                    <img src="image/s10.png" class="img100 w100 center" alt="">
+                </div>
+        <div class="area-sai gyaku2 m100 gyaku2" style="margin-top: -200px;">
+            <div class="lp-point-section" style="margin-top: 150px;">
                 <div class="lp-point-row">
                     <div class="lp-point-image-box">
-                    <img src="image/image2.jpg" alt="ベテラン馬券師">
+                        <img src="image/image2.jpg" alt="ベテラン馬券師">
                     </div>
                     <div class="lp-point-text-box">
-                    <div class="lp-point-bg-number">Point <span class="fs80">01</span></div>
-                    <h2 class="lp-point-title left lh1">逆転の方法を知り尽くした、<br class="pb">実力派の<span class="red">ベテラン馬券師</span></h2>
-                    <div class="lp-point-description left">
-                        競馬歴30年以上。<br>
-                        年間数百人以上の人生を変えている逆転のプロが<br class="pb">
-                        当サイトの専属馬券師として、あなたの道案内をします。<br><br>
-
-                        彼も元々、<br class="sb">ドン底から這い上がってきた超実力派。<br>
-                        誰よりも、負けの苦味を知っている。<br><br>
-
-                        だから――<br>
-                        他のサイトで勝てなかった人ほど、ここで逆転できる。
-
-                    </div>
+                        <div class="lp-point-bg-number">Point <span class="fs80">01</span></div>
+                        <h2 class="lp-point-title left lh1">逆転の方法を知り尽くした、<br>実力派の<span class="red">ベテラン馬券師</span></h2>
+                        <div class="lp-point-description left">
+                            競馬歴30年以上。<br>
+                            年間数百人以上の人生を変えている逆転のプロが<br>
+                            当サイトの専属馬券師として、あなたの道案内をします。<br><br>
+                            彼も元々、ドン底から這い上がってきた超実力派。<br>
+                            誰よりも、負けの苦味を知っている。<br><br>
+                            だから――<br>
+                            他のサイトで勝てなかった人ほど、ここで逆転できる。
+                        </div>
                     </div>
                 </div>
 
                 <div class="lp-point-row reverse">
                     <div class="lp-point-image-box">
-                    <img src="image/image12.jpg" alt="独占情報ネットワーク">
+                        <img src="image/image12.jpg" alt="独占情報ネットワーク">
                     </div>
                     <div class="lp-point-text-box">
-                    <div class="lp-point-bg-number">Point <span class="fs80">02</span></div>
-                    <h2 class="lp-point-title left lh11">独自ルートによる<br><span class="red">独占情報ネットワーク</span></h2>
-                    <div class="lp-point-description left">
-                        厩舎の内部事情、馬の仕上がり、各陣営の本音など、<br class="pb">
-                        一般には公開されない一次情報を関係者・現場ルートから独占入手。<br><br>
-
-                        人気やオッズが動く前に、<br class="sb">逆転の兆候を察知する。<br><br class="sb">
-                        他の人が知らない情報を、<br class="sb">一足先に知っている<br><br>
-
-                        だから、<br class="sb">ここに居る人だけが逆転できる。
-                    </div>
+                        <div class="lp-point-bg-number">Point <span class="fs80">02</span></div>
+                        <h2 class="lp-point-title left lh11">独自ルートによる<br><span class="red">独占情報ネットワーク</span></h2>
+                        <div class="lp-point-description left">
+                            厩舎の内部事情、馬の仕上がり、各陣営の本音など、<br>
+                            一般には公開されない一次情報を関係者・現場ルートから独占入手。<br><br>
+                            人気やオッズが動く前に、逆転の兆候を察知する。<br>
+                            他の人が知らない情報を、一足先に知っている<br><br>
+                            だから、ここに居る人だけが逆転できる。
+                        </div>
                     </div>
                 </div>
+
                 <div class="lp-point-row">
                     <div class="lp-point-image-box">
-                    <img src="image/i4.png" alt="ベテラン馬券師">
+                        <img src="image/i4.png" alt="サポートチーム">
                     </div>
                     <div class="lp-point-text-box">
-                    <div class="lp-point-bg-number">Point <span class="fs80">03</span></div>
-                    <h2 class="lp-point-title left lh1">専属サポートチームによる<br><span class="red">1対1の個別サポート体制</span></h2>
-                    <div class="lp-point-description left">
-                        逆転ジャンボでは、<br>
-                        自動返信や定型文による機械的な対応は一切行っていません。<br><br>
-
-                        すべて専属スタッフによる1対1対応。<br>
-                        人と人で、本気で向き合うサポートを徹底しています。<br><br>
-
-                        逆転は、一人では続かない。<br>
-                        困った時や分からないことは、いつでもサポートにご相談ください。
-
-
-                    </div>
+                        <div class="lp-point-bg-number">Point <span class="fs80">03</span></div>
+                        <h2 class="lp-point-title left lh1">専属サポートチームによる<br><span class="red">1対1の個別サポート体制</span></h2>
+                        <div class="lp-point-description left">
+                            逆転ジャンボでは、<br>
+                            自動返信や定型文による機械的な対応は一切行っていません。<br><br>
+                            すべて専属スタッフによる1対1対応。<br>
+                            人と人で、本気で向き合うサポートを徹底しています。<br><br>
+                            逆転は、一人では続かない。<br>
+                            困った時や分からないことは、いつでもサポートにご相談ください。
+                        </div>
                     </div>
                 </div>
+
                 <div class="lp-point-row reverse">
                     <div class="lp-point-image-box">
-                    <img src="image/i2.png" alt="独占情報ネットワーク">
+                        <img src="image/i2.png" alt="敗因データベース">
                     </div>
                     <div class="lp-point-text-box">
-                    <div class="lp-point-bg-number">Point <span class="fs80">04</span></div>
-                    <h2 class="lp-point-title left lh11">敗因データベースの蓄積で、<br class="pb"><span class="red">同じ負けを繰り返さない</span></h2>
-                    <div class="lp-point-description left">
-                        逆転ジャンボでは、<br>
-                        毎週すべての会員様に問いかけています。<br><br>
-
-
-                        <span class="bld">「なぜ今週、負けたましたか？」</span><br>
-
-                        <span class="bld">「どういう理由でこの馬を選びましたか？」</span><br>
-
-                        <span class="bld">「なぜこの馬は捨てましたか？」</span><br>
-
-                        アンケートに対して届いた回答を・・・
-
-
-
-                    </div>
+                        <div class="lp-point-bg-number">Point <span class="fs80">04</span></div>
+                        <h2 class="lp-point-title left lh11">敗因データベースの蓄積で、<br><span class="red">同じ負けを繰り返さない</span></h2>
+                        <div class="lp-point-description left">
+                            逆転ジャンボでは、<br>
+                            毎週すべての会員様に問いかけています。<br><br>
+                            <span class="fs20 bld">「なぜ今週、負けましたか？」</span><br>
+                            <span class="fs20 bld">「どういう理由でこの馬を選びましたか？」</span><br>
+                            <span class="fs20 bld">「なぜこの馬は捨てましたか？」</span><br>
+                            アンケートに対して届いた回答を・・・
+                        </div>
                     </div>
                 </div>
-                 <div class="ms-simple-arrow-container">
-            <div class="ms-simple-arrow-v2"><div class="ms-simple-arrow-v2"><div class="ms-simple-arrow-v2"></div></div></div>
-            </div>
+
+               <div class="ms-simple-arrow-container">
+                    <div class="ms-simple-arrow-v"><div class="ms-simple-arrow-v"><div class="ms-simple-arrow-v"></div></div></div>
+                </div>    
             </div>
         </div>
         <section class="ms-system-container">
@@ -459,27 +474,110 @@
                 </div> 
             </div>
        </div>
-        <h2 class="ms-system-title m30 fs50 lh1 center">
-                <span class="red ylshadow2">《 注目の的中実績 》</span></h2>
+        <div class="zz2">
+                    <img src="image/zi.png" class="img100 w100 center" alt="">
+                </div>
+        <div class="area-rt br20 gyaku2" style="border: #A51111 solid 5px;">
 
-        <div class="ms-image-container">
-            <img src="image/image4.png" alt="的中実績1">
-            <img src="image/image4.png" alt="的中実績2">
-        </div>
-         <div class="ms-image-container">
-            <img src="image/image4.png" alt="的中実績1">
-            <img src="image/image4.png" alt="的中実績2">
-        </div>
-         <div class="ms-image-container">
-            <img src="image/image4.png" alt="的中実績1">
-            <img src="image/image4.png" alt="的中実績2">
-        </div>
-         <div class="ms-image-container">
-            <img src="image/image4.png" alt="的中実績1">
-            <img src="image/image4.png" alt="的中実績2">
+        <div class="result-wrapper" style="margin-top: 200px;">
+        <div class="result-card">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="ロゴ">
+            </div>
+            <div class="race-info">
+                <div class="date left">9月16日(土)</div>
+                <div class="track left">阪神4R</div>
+                <div class="class-name left">3歳以上1勝クラス</div>
+            </div>
+            <div class="ticket-type">三連単</div>
+            <div class="bake">
+                <div class="amount mincho4">30<span>万</span>8,020<span>円</span></div>
+            </div>
         </div>
 
-        <img src="image/zero.png" class="img100 w100 center" alt="">
+        <div class="result-card">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="ロゴ">
+            </div>
+            <div class="race-info">
+                <div class="date left">9月16日(土)</div>
+                <div class="track left">阪神4R</div>
+                <div class="class-name left">3歳以上1勝クラス</div>
+            </div>
+            <div class="ticket-type">三連単</div>
+            <div class="bake">
+                <div class="amount mincho4">30<span>万</span>8,020<span>円</span></div>
+            </div>
+        </div>
+        
+        </div>
+         <div class="result-wrapper">
+        <div class="result-card">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="ロゴ">
+            </div>
+            <div class="race-info">
+                <div class="date left">9月16日(土)</div>
+                <div class="track left">阪神4R</div>
+                <div class="class-name left">3歳以上1勝クラス</div>
+            </div>
+            <div class="ticket-type">三連単</div>
+            <div class="bake">
+                <div class="amount mincho4">30<span>万</span>8,020<span>円</span></div>
+            </div>
+        </div>
+
+        <div class="result-card">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="ロゴ">
+            </div>
+            <div class="race-info">
+                <div class="date left">9月16日(土)</div>
+                <div class="track left">阪神4R</div>
+                <div class="class-name left">3歳以上1勝クラス</div>
+            </div>
+            <div class="ticket-type">三連単</div>
+            <div class="bake">
+                <div class="amount mincho4">30<span>万</span>8,020<span>円</span></div>
+            </div>
+        </div>
+        
+        </div>
+          <div class="result-wrapper">
+        <div class="result-card">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="ロゴ">
+            </div>
+            <div class="race-info">
+                <div class="date left">9月16日(土)</div>
+                <div class="track left">阪神4R</div>
+                <div class="class-name left">3歳以上1勝クラス</div>
+            </div>
+            <div class="ticket-type">三連単</div>
+            <div class="bake">
+                <div class="amount mincho4">30<span>万</span>8,020<span>円</span></div>
+            </div>
+        </div>
+
+        <div class="result-card">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="ロゴ">
+            </div>
+            <div class="race-info">
+                <div class="date left">9月16日(土)</div>
+                <div class="track left">阪神4R</div>
+                <div class="class-name left">3歳以上1勝クラス</div>
+            </div>
+            <div class="ticket-type">三連単</div>
+            <div class="bake">
+                <div class="amount mincho4">30<span>万</span>8,020<span>円</span></div>
+            </div>
+        </div>
+        
+        </div>
+        </div>
+
+        <img src="image/sp_sec.png" class="img100 w100 center" alt="">
 
         <div class="area-box-g area-p5">
             <div class="area-box-rd area-p10 center">
@@ -489,28 +587,31 @@
             </div>
         </div>
         <div style="background-color: #A51111;">
-         <p class="p0 center" style="background-color: #A51111;">
-            <img src="image/pc_pl.png" class="pv img100 w100 center" alt="">
-        </p>
         <p class="p0 center" style="background-color: #A51111;">
-            <img src="image/sp_pl.png" class="sv img100 w100 center" alt="">
+            <img src="image/sp_pl.png" class="img100 w100 center" alt="">
         </p>
         </div>
         <div style="background-color: #A51111;">
         <div class="area-main">
-            <p class="bld fs40 wt p0 p20 lh1 center"><span class="un-w">負け続けた人ほど、</span><br>ここでは勝てる理由とは！？</p>
-            <div class="form-container center">
-                <p class="p0 lh12">
-                    その<span class="mincho4 red fs30 ylshadow2">秘密</span>と共に、<br>
-                    今週末<span class="mincho4 yellow fs30">フェブラリーS（G3）</span>の<br>
-                    <span class="mincho4 yellow fs30">無料予想を公開中！</span> ▼
-                </p>
-                <input type="email" classs="input-field" placeholder="メールアドレスを入力">
-                <button type="submit" class="submit-button m20">今すぐ無料予想を受け取る▶︎</button>
-                <p class="note-text p0">※登録は1分で完了します</p>
-            </div>
-            
-        </div></div>
+                    <p class="bld fs40 wt p0 m20 lh1 center"><span class="un-w">負け続けた人ほど、</span><br>ここでは勝てる理由とは！？</p>
+                    <div class="lp-shine-wrap m30">
+                        <div class="form-container center">
+                            <p class="p0 lh12 lp-form-title">
+                                その<span class="mincho4 red fs30 ylshadow2">秘密</span>と共に、<br>
+                                今週末<span class="mincho4 yellow fs30">フェブラリーS（G3）</span>の<br>
+                                <span class="mincho4 yellow fs30">無料予想を公開中！</span> <span class="arrow-down">▼</span>
+                            </p>
+                            
+                            <input type="email" class="input-field" placeholder="メールアドレスを入力">
+                            
+                            <button type="submit" class="submit-button lp-btn-shine">
+                                <span class="btn-text">今すぐ無料予想を受け取る ▶︎</span>
+                            </button>
+                            
+                            <p class="note-text p0">※登録は1分で完了します</p>
+                        </div>
+                    </div>
+                </div>
         </div>
        
          <section class="ms-system-container">
@@ -541,12 +642,6 @@
                 <div class="ms-balloon2">
                 <p class="ms-balloon-text2 p0 wt">
                     サイトの使い方が分からない・・・
-                </p>
-                </div>
-
-                <div class="ms-balloon2">
-                <p class="ms-balloon-text2 p0 wt">
-                    サービスの使い方が分からない・・・
                 </p>
                 </div>
 
@@ -757,62 +852,115 @@
             </div>
         </div>
         </div>
-    <div class="area-main">
-                <img src="image/i3.png" alt="" class="w100">
+       <img src="image/sai2.png" class="img100 w100 center" alt="">
+            <div class="area-rt" style="margin-top: -200px;">
+                <p class="fs50 bld center red ylshadow2 p0" style="padding-top:200px;">むしろ、チャンスです。</p>
+                       
+                <img src="image/bg5.png" class="img100 w100 center" alt="">
 
-
-            <div class="ms-col-side-notes m20 area-p30">
-                
-                <div class="ms-balloon2">
-                <p class="ms-balloon-text2 p0 wt">
-                    ずっと負け続けてきた。
-                </p>
+                <div class="zz2">
+                    <img src="image/zi.png" class="img100 w100 center" alt="">
                 </div>
-
-                <div class="ms-balloon2">
-                <p class="ms-balloon-text2 p0 wt">
-                    何をやっても勝てない。
-                </p>
-                </div>
-
-            </div> 
-    </div>
-                        <p class="empathy-solution p0 m20 fs30 area-p30">
-                            もう人生のドン底だと思っているなら――
-                        </p>
-                        
-                    </div>
-                </div>
-                <p class="fs50 bld center red ylshadow2">むしろ、チャンスです。</p>
             </div>
-        </section>
-            <div class="area-main">
-                <p class="p0 fs30 center m20 lh1">今、「逆転ジャンボ」では<br>
-                <span class="green fs60 bld">たった2,3分。<br class="sb">指先ひとつの操作で、</span></p>
+        <div class="area-rt br20 gyaku2" style="border: #A51111 solid 5px;">
 
-                <p class="fs30 center lh1 bld">多くの会員様の<br>
-                <span class="marker fs40 bld">人生がひっくり返っています。</span></p>
-
-                <h2 class="ms-system-title m30 fs50 lh1 center">
-                <span class="red ylshadow2">《 注目の的中実績 》</span></h2>
-
-        <div class="ms-image-container">
-            <img src="image/image4.png" alt="的中実績1">
-            <img src="image/image4.png" alt="的中実績2">
-        </div>
-         <div class="ms-image-container">
-            <img src="image/image4.png" alt="的中実績1">
-            <img src="image/image4.png" alt="的中実績2">
-        </div>
-         <div class="ms-image-container">
-            <img src="image/image4.png" alt="的中実績1">
-            <img src="image/image4.png" alt="的中実績2">
-        </div>
-         <div class="ms-image-container">
-            <img src="image/image4.png" alt="的中実績1">
-            <img src="image/image4.png" alt="的中実績2">
-        </div>
+        <div class="result-wrapper" style="margin-top: 200px;">
+        <div class="result-card">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="ロゴ">
             </div>
+            <div class="race-info">
+                <div class="date left">9月16日(土)</div>
+                <div class="track left">阪神4R</div>
+                <div class="class-name left">3歳以上1勝クラス</div>
+            </div>
+            <div class="ticket-type">三連単</div>
+            <div class="bake">
+                <div class="amount mincho4">30<span>万</span>8,020<span>円</span></div>
+            </div>
+        </div>
+
+        <div class="result-card">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="ロゴ">
+            </div>
+            <div class="race-info">
+                <div class="date left">9月16日(土)</div>
+                <div class="track left">阪神4R</div>
+                <div class="class-name left">3歳以上1勝クラス</div>
+            </div>
+            <div class="ticket-type">三連単</div>
+            <div class="bake">
+                <div class="amount mincho4">30<span>万</span>8,020<span>円</span></div>
+            </div>
+        </div>
+        
+        </div>
+         <div class="result-wrapper">
+        <div class="result-card">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="ロゴ">
+            </div>
+            <div class="race-info">
+                <div class="date left">9月16日(土)</div>
+                <div class="track left">阪神4R</div>
+                <div class="class-name left">3歳以上1勝クラス</div>
+            </div>
+            <div class="ticket-type">三連単</div>
+            <div class="bake">
+                <div class="amount mincho4">30<span>万</span>8,020<span>円</span></div>
+            </div>
+        </div>
+
+        <div class="result-card">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="ロゴ">
+            </div>
+            <div class="race-info">
+                <div class="date left">9月16日(土)</div>
+                <div class="track left">阪神4R</div>
+                <div class="class-name left">3歳以上1勝クラス</div>
+            </div>
+            <div class="ticket-type">三連単</div>
+            <div class="bake">
+                <div class="amount mincho4">30<span>万</span>8,020<span>円</span></div>
+            </div>
+        </div>
+        
+        </div>
+          <div class="result-wrapper">
+        <div class="result-card">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="ロゴ">
+            </div>
+            <div class="race-info">
+                <div class="date left">9月16日(土)</div>
+                <div class="track left">阪神4R</div>
+                <div class="class-name left">3歳以上1勝クラス</div>
+            </div>
+            <div class="ticket-type">三連単</div>
+            <div class="bake">
+                <div class="amount mincho4">30<span>万</span>8,020<span>円</span></div>
+            </div>
+        </div>
+
+        <div class="result-card">
+            <div class="logo-area">
+                <img src="image/logo.png" alt="ロゴ">
+            </div>
+            <div class="race-info">
+                <div class="date left">9月16日(土)</div>
+                <div class="track left">阪神4R</div>
+                <div class="class-name left">3歳以上1勝クラス</div>
+            </div>
+            <div class="ticket-type">三連単</div>
+            <div class="bake">
+                <div class="amount mincho4">30<span>万</span>8,020<span>円</span></div>
+            </div>
+        </div>
+        
+        </div>
+        </div>
               <div class="area-box-g area-p5">
             <div class="area-box-rd area-p10 center">
                 <div class="area-box-y rdshadow2 fs80 bld area-p40 lh1">
@@ -822,40 +970,32 @@
                 </div>
             </div>
         </div>
-
-        <img src="image/zero.png" class="img100 w100 center" alt="">
-
-        <div class="area-box-g area-p5">
-            <div class="area-box-rd area-p10 center">
-                <div class="area-box-y rdshadow2 fs50 bld area-p40">
-                    <span class="yellow">毎週末が、<br class="sb">人生逆転のチャンス！</span>
-                </div>
-            </div>
-        </div>
-        </section>
                 
-        
-         <p class="p0 center" style="background-color: #A51111;">
-            <img src="image/pc_pl.png" class="pv img100 w100 center" alt="">
-        </p>
         <p class="p0 center">
-            <img src="image/sp_pl.png" class="sv img100 w100 center" alt="">
+            <img src="image/sp_pl.png" class="img100 w100 center" alt="">
         </p>
         <div style="background-color: #A51111;" class=" pb30">
     <div class="area-main">
-         <p class="bld fs40 wt p0 p20 lh1 center"><span class="un-w">負け続けた人ほど、</span><br>ここでは勝てる理由とは！？</p>
-         <div class="form-container center">
-            <p class="p0 lh12">
-                その<span class="mincho4 red fs30 ylshadow2">秘密</span>と共に、<br>
-                今週末<span class="mincho4 yellow fs30">フェブラリーS（G3）</span>の<br>
-                <span class="mincho4 yellow fs30">無料予想を公開中！</span> ▼
-            </p>
-            <input type="email" classs="input-field" placeholder="メールアドレスを入力">
-            <button type="submit" class="submit-button m20">今すぐ無料予想を受け取る▶︎</button>
-            <p class="note-text p0">※登録は1分で完了します</p>
+                    <p class="bld fs40 wt p0 m20 lh1 center"><span class="un-w">負け続けた人ほど、</span><br>ここでは勝てる理由とは！？</p>
+                    <div class="lp-shine-wrap m30">
+                        <div class="form-container center">
+                            <p class="p0 lh12 lp-form-title">
+                                その<span class="mincho4 red fs30 ylshadow2">秘密</span>と共に、<br>
+                                今週末<span class="mincho4 yellow fs30">フェブラリーS（G3）</span>の<br>
+                                <span class="mincho4 yellow fs30">無料予想を公開中！</span> <span class="arrow-down">▼</span>
+                            </p>
+                            
+                            <input type="email" class="input-field" placeholder="メールアドレスを入力">
+                            
+                            <button type="submit" class="submit-button lp-btn-shine">
+                                <span class="btn-text">今すぐ無料予想を受け取る ▶︎</span>
+                            </button>
+                            
+                            <p class="note-text p0">※登録は1分で完了します</p>
+                        </div>
+                    </div>
+                </div>
         </div>
-        
-    </div></div>
 
         <div id="footer_n">
             <div class="footer m30">
@@ -869,6 +1009,24 @@
             </div>
 
         </div>
+    </div>
+     <script>
+    function lpControlModal(type, action) {
+        const overlay = document.getElementById('lpOverlay');
+        const loginForm = document.getElementById('lpLoginContent');
+        const signupForm = document.getElementById('lpSignupContent');
+
+        if (action === 'open') {
+            overlay.style.display = 'block';
+            if (type === 'login') loginForm.style.display = 'block';
+            else signupForm.style.display = 'block';
+        } else {
+            overlay.style.display = 'none';
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'none';
+        }
+    }
+</script>
 
         <script>
         // 円周（r=64 => 2πr ≒ 402）
