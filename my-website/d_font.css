@@ -1,40 +1,91 @@
 @charset "utf-8";
 
 
-/*　fontstyle
-*********************************************************/
 html { 
   font-size: 62.5%;
 
 }
 
-.indent-f{
-	text-indent: 1em;
-	padding-left: 1em;
-}
-
-.indent-b{
-	text-indent: -1em;
-	padding-left: 2em;
-}
-
 
 .fs12{line-height: 1.6; font-size:1.2rem;}
-.fs13{line-height: 1.6; font-size:1.3rem;}
-.fs14{line-height: 1.6; font-size:1.4rem;}
-.fs15{line-height: 1.6; font-size:1.5rem;}
-.fs16{line-height: 1.6; font-size:1.6rem;}
-.fs17{line-height: 1.6; font-size:1.7rem;}
 .fs18{line-height: 1.6; font-size:1.8rem;}
-.fs19{line-height: 1.6; font-size:1.9rem;}
 .fs20{line-height: 1.6; font-size:2.0rem;}
-.fs22{line-height: 1.6; font-size:2.2rem;}
-.fs25{line-height: 1.6; font-size:2.5rem;}
-.fs28{line-height: 1.6; font-size:2.8rem;}
 .fs30{line-height: 1.6; font-size:3.0rem;}
-.fs35{line-height: 1.6; font-size:3.5rem;}
 .fs40{line-height: 1.6; font-size:4.0rem;}
-.fs45{line-height: 1.6; font-size:4.5rem;}
+.fs50{line-height: 1.6; font-size:5.0rem;}
+.fs60{line-height: 1.6; font-size:6.0rem;}
+.fs80{line-height: 1.6; font-size:8.0rem;}
+.fs100{line-height: 1.6; font-size:10.0rem;}
+
+
+.m10{margin-top:1.0rem;}
+.m20{margin-top:2.0rem;}
+.m30{margin-top:3.0rem;}
+.m50{margin-top:5.0rem;}
+.m60{margin-top:6.0rem;}
+.m100{margin-top:10.0rem;}
+.m150{margin-top:15.0rem;}
+
+.p0{padding-top: 0;}
+.p10{padding-top:1.0rem;}
+.p30{padding-top:3.0rem;}
+.pb20{padding-bottom:2rem;}
+.pb30{padding-bottom:3rem;}
+
+.w100{width: 100%;}
+
+.bld{font-weight: 800;}
+
+.red{color:#DE2024;}
+.yellow{color:#ffff00;}
+.wt{color: #ffffff;}
+.gray{color: #adadad;}
+
+.center{
+	/* display:block; */
+	text-align:center;
+}
+.left{text-align: left;}
+.br20{border-radius: 2rem;}
+
+
+.lh1{line-height:1!important;}
+.lh11{line-height:1.1!important;}
+.lh12{line-height:1.2!important;}
+.area-p5{padding: 0.5rem;}
+.area-p10{padding: 1rem;}
+.area-p20{padding: 2rem;}
+.area-p30{padding: 3rem;}
+.area-p40{padding: 4rem;}
+
+  .ylshadow2 {
+	text-shadow    : 
+		 2px  2px 4px #FDEC98,
+		-2px  2px 4px #FDEC98,
+		 2px -2px 4px #FDEC98,
+		-2px -2px 4px #FDEC98,
+		 2px  0px 4px #FDEC98,
+		 0px  2px 4px #FDEC98,
+		-2px  0px 4px #FDEC98,
+		 0px -2px 4px #FDEC98;        /* 文字の影 */
+  }
+  .rdshadow2 {
+	text-shadow    : 
+		 2px  2px 7px #db3102,
+		-2px  2px 7px #db3102,
+		 2px -2px 7px #db3102,
+		-2px -2px 7px #db3102,
+		 2px  0px 7px #db3102,
+		 0px  2px 7px #db3102,
+		-2px  0px 7px #db3102,
+		 0px -2px 7px #db3102;        /* 文字の影 */
+  }
+
+
+.mincho4{
+	font-family: 'Noto Serif JP', sans-serif;
+	font-weight:900;
+}.fs45{line-height: 1.6; font-size:4.5rem;}
 .fs50{line-height: 1.6; font-size:5.0rem;}
 .fs55{line-height: 1.6; font-size:5.5rem;}
 .fs60{line-height: 1.6; font-size:6.0rem;}
