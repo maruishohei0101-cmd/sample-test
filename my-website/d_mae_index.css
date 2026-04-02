@@ -1,16 +1,89 @@
 @charset "utf-8";
 
-*{
-	margin:0;
-	padding:0;
+html { 
+  font-size: 62.5%;
+
 }
 
-*, *:before, *:after { 
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-         -o-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-            box-sizing: border-box;
+
+.fs12{line-height: 1.6; font-size:1.2rem;}
+.fs18{line-height: 1.6; font-size:1.8rem;}
+.fs20{line-height: 1.6; font-size:2.0rem;}
+.fs30{line-height: 1.6; font-size:3.0rem;}
+.fs40{line-height: 1.6; font-size:4.0rem;}
+.fs50{line-height: 1.6; font-size:5.0rem;}
+.fs60{line-height: 1.6; font-size:6.0rem;}
+.fs80{line-height: 1.6; font-size:8.0rem;}
+.fs100{line-height: 1.6; font-size:10.0rem;}
+
+
+.m10{margin-top:1.0rem;}
+.m20{margin-top:2.0rem;}
+.m30{margin-top:3.0rem;}
+.m50{margin-top:5.0rem;}
+.m60{margin-top:6.0rem;}
+.m100{margin-top:10.0rem;}
+.m150{margin-top:15.0rem;}
+
+.p0{padding-top: 0;}
+.p10{padding-top:1.0rem;}
+.p30{padding-top:3.0rem;}
+.pb20{padding-bottom:2rem;}
+.pb30{padding-bottom:3rem;}
+
+.w100{width: 100%;}
+
+.bld{font-weight: 800;}
+
+.red{color:#DE2024;}
+.yellow{color:#ffff00;}
+.wt{color: #ffffff;}
+.gray{color: #adadad;}
+
+.center{
+	/* display:block; */
+	text-align:center;
+}
+.left{text-align: left;}
+.br20{border-radius: 2rem;}
+
+
+.lh1{line-height:1!important;}
+.lh11{line-height:1.1!important;}
+.lh12{line-height:1.2!important;}
+.area-p5{padding: 0.5rem;}
+.area-p10{padding: 1rem;}
+.area-p20{padding: 2rem;}
+.area-p30{padding: 3rem;}
+.area-p40{padding: 4rem;}
+
+  .ylshadow2 {
+	text-shadow    : 
+		 2px  2px 4px #FDEC98,
+		-2px  2px 4px #FDEC98,
+		 2px -2px 4px #FDEC98,
+		-2px -2px 4px #FDEC98,
+		 2px  0px 4px #FDEC98,
+		 0px  2px 4px #FDEC98,
+		-2px  0px 4px #FDEC98,
+		 0px -2px 4px #FDEC98;        /* 文字の影 */
+  }
+  .rdshadow2 {
+	text-shadow    : 
+		 2px  2px 7px #db3102,
+		-2px  2px 7px #db3102,
+		 2px -2px 7px #db3102,
+		-2px -2px 7px #db3102,
+		 2px  0px 7px #db3102,
+		 0px  2px 7px #db3102,
+		-2px  0px 7px #db3102,
+		 0px -2px 7px #db3102;        /* 文字の影 */
+  }
+
+
+.mincho4{
+	font-family: 'Noto Serif JP', sans-serif;
+	font-weight:900;
 }
 
 /* Firefox */
@@ -35,6 +108,1513 @@ background-color: #B8C0C2;
 
 *::-webkit-scrollbar-track:active {
 background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-thumb {
+border-radius: 10px;
+height: 10rem;
+background-color: #195005e0;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+background-color: #62A34B;
+}
+
+*::-webkit-scrollbar-thumb:active {
+background-color: #62A34B;
+}
+
+
+body{
+	background-color: #fefff7;
+	background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */	background-attachment: fixed; */
+	color: #000000;
+	font-size: 20px;
+	line-height: 1.6;
+	font-family: "メイリオ","Meiryo","Osaka","MS Pゴシック","MSゴシック",Helvetica,verdana,arial;
+	
+}
+
+body::before {
+	background-color: red;
+	/* background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png"); */
+	background-image:url(image/bg30.png);
+	background-repeat:no-repeat no-repeat;
+	background-position:center center;
+
+	background-size: cover;
+	content: "";
+
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+	height: 100vh;
+
+	/* -webkit-animation: zoom 20s 1;
+	animation: zoom 20s 1;
+	animation-fill-mode: forwards;
+	animation-iteration-count:infinite;
+	animation-timing-function:ease-in;
+	animation-direction:alternate; */
+}
+
+.main-content {
+  width: 980px;     /* 幅を1000pxに固定 */
+  margin: 0 auto;    /* 左右の余白を自動で均等にして中央に配置 */
+}
+
+
+img{vertical-align:bottom;}
+
+br{letter-spacing:0;}
+br.sb{display: none;}
+@media screen and (min-width: 568px) {
+button:hover{opacity: 0.8;}
+    /* ホバースタイルは横幅が大きなデバイスだけ */
+}
+
+/* a:link{text-decoration:none; color: #fffb00;} */
+/* a:visited{text-decoration:none; color: #fffb00;} */
+
+
+/*　head
+*********************************************************/
+
+/*========= ローディング画面のためのCSS ===============*/
+  
+  
+  /*========= 画面遷移のためのCSS ===============*/
+  
+  /*画面遷移アニメーション*/
+  
+  /*bodyにappearクラスがついたら出現*/
+  
+  /*右に消えるエリア*/
+  
+  /*左に消えるエリア*/
+  
+
+
+
+.area-main{
+	max-width:95rem;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+p{padding-top:8rem; }
+
+/*********************************************************
+	フッター
+*********************************************************/
+.footer{
+	background-color: #000000;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+.footer .copy{
+	font-size: 1.4rem;
+	color: #dddddd;
+	padding: 1rem 0.5rem;
+	text-align: center;
+}
+
+
+
+
+
+@media screen and (max-width: 1024px) { 
+
+
+img.img100{width: 100%;}
+img.w100{width: 100%;}
+.footer{width: 100%;}
+
+}
+
+
+.footer {
+	width:100%;
+	/* max-width:700px; */
+	overflow: hidden;
+	margin:0px auto;
+	text-align: center;
+	line-height:1;
+}
+
+.area-box-g{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f3e2c7+1,c19e67+50,b68d4c+51,f3e2c7+94,f3e2c7+94,e9d4b3+100 */
+background: #f3e2c7; /* Old browsers */
+background: -moz-linear-gradient(top,  #f3e2c7 1%, #c19e67 50%, #b68d4c 51%, #f3e2c7 94%, #f3e2c7 94%, #e9d4b3 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f3e2c7 1%,#c19e67 50%,#b68d4c 51%,#f3e2c7 94%,#f3e2c7 94%,#e9d4b3 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f3e2c7 1%,#c19e67 50%,#b68d4c 51%,#f3e2c7 94%,#f3e2c7 94%,#e9d4b3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3',GradientType=0 ); /* IE6-9 */
+/*background-attachment: fixed;
+*/border: 0.4rem ridge #E6D2B0;
+
+}
+
+.area-box-rd{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,9f0c0c+100 */
+background: #cf0404; /* Old browsers */
+background: -moz-linear-gradient(top,  #cf0404 0%, #9f0c0c 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #cf0404 0%,#9f0c0c 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #cf0404 0%,#9f0c0c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf0404', endColorstr='#9f0c0c',GradientType=0 ); /* IE6-9 */
+}
+
+/* ===== Empathy Section Styles ===== */
+
+/* ===== Responsive ===== */
+
+/* グロス（上部の光沢） */
+
+/* 押下フィードバック（沈む＆影が薄くなる） */
+
+/* キーボード操作・スクリーンリーダー配慮 */
+.line-btn:focus-visible {
+  outline: 3px solid #b1f5cd;
+  outline-offset: 2px;
+}
+
+/* アイコン（白地にLINE吹き出し） */
+
+/* テキスト */
+
+/* 進む矢印（“>”の視覚） */
+
+/* 低モーション設定に配慮 */
+
+/* PCレイアウト：幅に応じて2〜3カラム */
+
+/* ===== Solution (解決パート) ===== */
+img{
+	width: 80%;
+}
+
+/* SP：1カラム縦積み */
+
+/* PCは3カラム */
+
+/* ===== Reuse: LINE Button (CTA) ===== */
+
+/* ===== Trust (信頼補強) ===== */
+
+
+
+/* PCは3カラム */
+
+/* ===== Closing CTA ===== */
+
+/* スマホ調整 */
+
+
+
+
+:root {
+    --lp-neon-pink: #ff0055;
+    --lp-neon-blue: #00d9ff;
+    --lp-neon-gold: #ffcc00;
+    /* 各ダイヤルの背景（赤フェルトの上に置く、少し暗い色） */
+    --lp-dial-bg: rgba(0, 0, 0, 0.3); 
+}
+
+/* --- セクション全体 --- */
+.lp-kpi-section {
+    max-width: 1100px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* --- 全体コンテナ（黒背景を撤廃） --- */
+.lp-kpi-wrapper {
+    background: transparent; /* 背景なし */
+    padding: 0;
+}
+
+/* --- タイトル：赤背景の上に直接置く --- */
+.lp-kpi-main-title {
+    color: #fff; /* ゴールドから白に変更してスッキリさせる */
+    text-align: center;
+    font-size: clamp(28px, 6vw, 48px);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 50px;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.3); /* 赤背景になじませる */
+}
+
+/* --- レイアウト --- */
+.lp-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* 隙間を広げて独立させる */
+    margin-bottom: 10px;
+}
+
+/* --- 【最重要】各ダイヤルに背景と立体感を付与 --- */
+.lp-dial {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* ここから新しいスタイル */
+    background: var(--lp-dial-bg);
+    padding: 30px 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08); /* うっすらとした枠線 */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2); /* 浮いているような影 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ホバー時のちょっとしたポップな動き */
+.lp-dial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.lp-dial-label {
+    color: #eee;
+    font-weight: bold;
+    font-size: clamp(12px, 2.5vw, 16px);
+    line-height: 1.4;
+    margin-bottom: 20px;
+    min-height: 2.8em;
+}
+
+/* --- 円グラフのラッパー --- */
+.lp-dial-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 180px;
+}
+
+.lp-dial-wrapper svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.lp-dial-value {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -45%);
+    font-weight: 900;
+    font-size: clamp(24px, 5vw, 44px);
+    letter-spacing: -0.02em;
+    color: #fff; /* 基本は白 */
+}
+
+.lp-dial-value small {
+    font-size: 0.45em;
+    margin-left: 2px;
+}
+
+/* --- 各色：ネオンのように光らせる --- */
+/* 円だけでなく、ダイヤル自体の枠線もうっすら光らせる */
+.c-pink { border-color: rgba(255, 0, 85, 0.2); }
+.c-pink .ring-fg { stroke: var(--lp-neon-pink); filter: drop-shadow(0 0 8px var(--lp-neon-pink)); }
+.c-pink .lp-dial-value { text-shadow: 0 0 15px var(--lp-neon-pink); }
+
+.c-blue { border-color: rgba(0, 217, 255, 0.2); }
+.c-blue .ring-fg { stroke: var(--lp-neon-blue); filter: drop-shadow(0 0 8px var(--lp-neon-blue)); }
+.c-blue .lp-dial-value { text-shadow: 0 0 15px var(--lp-neon-blue); }
+
+.c-gold { border-color: rgba(255, 204, 0, 0.2); }
+.c-gold .ring-fg { stroke: var(--lp-neon-gold); filter: drop-shadow(0 0 8px var(--lp-neon-gold)); }
+.c-gold .lp-dial-value { text-shadow: 0 0 15px var(--lp-neon-gold); }
+
+/* --- 円のベースライン --- */
+.ring-bg { stroke: rgba(255,255,255,0.05); fill: none; stroke-width: 12; }
+.ring-fg { 
+    fill: none; stroke-width: 14; stroke-linecap: round;
+    transform: rotate(-90deg); transform-origin: 50% 50%;
+    transition: stroke-dashoffset 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- フッターエリア --- */
+.lp-kpi-footer {
+    text-align: center;
+    color: #fff;
+    font-size: clamp(16px, 3vw, 22px);
+    margin-top: 50px;
+}
+.lp-highlight {
+    color: var(--lp-neon-gold);
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.1em;
+    display: block; /* 改行させる */
+}
+
+/* --- スマホ最適化（全画面表示ではなく、独立したカードを維持） --- */
+@media (max-width: 768px) {
+    .lp-kpi-section {padding: 0 10px; }
+    .lp-kpi-grid { gap: 8px; }
+    .lp-dial { padding: 20px 5px; border-radius: 12px; }
+    .lp-dial-label { font-size: 11px; margin-bottom: 10px; }
+    .lp-dial-value { font-size: 20px; }
+}
+
+/* ③ クリック感・フォーカスのアクセシビリティ */
+.floating-line-btn:focus-visible{
+  outline: 3px solid #fff;
+  box-shadow: 0 0 0 4px rgba(6,199,85,.55);
+}
+
+
+
+/* ④ スマホでは幅広く、親指で押しやすく */
+
+/* ⑤ デスクトップだけ右下の丸ボタンにしたい場合（任意） */
+
+/* PCでは表示する（上書き） */
+
+
+
+   /* 1. 光る外周ボーダーのコンテナ */
+.lp-shine-wrap {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px; /* 光るラインが見える隙間 */
+    background: #111; /* 外側の暗い背景 */
+    border-radius: 40px;
+    overflow: hidden; /* はみ出した光を隠す */
+    box-shadow: 0 0 30px rgba(255, 221, 0, 0.3); /* 全体の淡い光 */
+}
+
+/* 2. ボーダーを回る光の正体 (疑似要素) */
+.lp-shine-wrap::before {
+    content: '';
+    position: absolute;
+    width: 200%; /* コンテナより大きく */
+    height: 200%;
+    background: conic-gradient(
+        transparent, 
+        #ffdd00, /* 光の色1（黄色） */
+        #ff3b3b, /* 光の色2（赤） */
+        transparent 30%
+    );
+    top: -50%;
+    left: -50%;
+    animation: rotate-border 4s linear infinite; /* アニメーション */
+    z-index: 1;
+}
+
+/* 3. 実際のコンテンツコンテナ (既存を改良) */
+.lp-shine-wrap .form-container {
+    background-color: #222; /* より暗くして光を引き立てる */
+    background-image: radial-gradient(#333 1px, transparent 1px); /* うっすらとしたドットパターン */
+    background-size: 20px 20px;
+    padding: 40px 30px 30px;
+    border-radius: 35px; /* 少し小さく */
+    position: relative;
+    z-index: 2; /* 光の上に配置 */
+    color: white;
+}
+
+/* 4. タイトルエリアの調整 */
+.lp-form-title {
+    margin-bottom: 30px;
+}
+.lp-form-title span.fs30 {
+    font-weight: bold;
+}
+.arrow-down {
+    display: block;
+    font-size: 1.5rem;
+    color: #ffdd00;
+    margin-top: 10px;
+    animation: arrow-bounce 1s infinite alternate;
+}
+
+/* 5. メール入力欄の改良 */
+.input-field {
+    width: 100%;
+    /* max-width: 80%; */
+    padding: 18px 25px;
+    border: 1px solid #fff; /* 暗いボーダー */
+    border-radius: 10px; /* 完全な丸み */
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: white;
+    background-color: rgba(255,255,255,0.1); /* 半透明 */
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+.input-field:focus {
+    outline: none;
+    border-color: #ffdd00;
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 0 0 15px rgba(255, 221, 0, 0.4);
+}
+
+/* 6. 登録ボタンの改良（グラデーション＋光） */
+.submit-button {
+    width: 100%;
+    max-width: 450px;
+    padding: 22px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ffeb3b, #ff9800); /* 鮮やかなグラデ */
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden; /* ボタン内の光を隠す */
+    box-shadow: 0 5px 0 #c67600; /* 立体感 */
+    transition: all 0.1s;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+}
+.submit-button:active {
+    transform: translateY(3px); /* 押し込む効果 */
+    box-shadow: 0 2px 0 #c67600;
+}
+
+/* 7. ボタンを通過する閃光エフェクト */
+.lp-btn-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    animation: btn-shine 3s infinite;
+}
+
+/* 注意書き */
+.note-text {
+    font-size: 14px;
+    color: #ccc;
+    opacity: 0.8;
+}
+
+/* --- アニメーション定義 --- */
+
+/* ボーダーラインを光が回る */
+@keyframes rotate-border {
+    100% { transform: rotate(360deg); }
+}
+
+/* 矢印がピコピコ動く */
+@keyframes arrow-bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(5px); }
+}
+
+/* ボタンを閃光が走る */
+@keyframes btn-shine {
+    100% { left: 150%; }
+}
+.ms-fv-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+@media screen and (min-width: 769px) {
+  .input-field {
+    max-width: 100%;
+  }
+}
+
+  /* FVの下部を円形にカットするマスク */
+
+  /* 実績セクションを少し上に浮かせる */
+  .payout-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+	border-radius: 100px 100px 0 0;
+  }
+
+  /* 既存のCSSに「縁取り」と「浮遊感」を追加 */
+  .payout-container {
+    width: 100%;
+	background-color: #a51111;
+	background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+    /* 金色の縁取りをより豪華に（二重線風） */
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* --- 以下、既存の装飾を維持 --- */
+  .payout-container::after {
+    content: '';
+    position: absolute;
+    /* top: -50%; left: -50%; width: 200%; height: 200%; */
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .race-info {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+	/* position: relative;
+	top: -40px; */
+  }
+
+  .payout-main {
+    display: flex;
+	align-items: center; /* 垂直方向の中央揃え */
+	justify-content: center; /* 水平方向の中央寄せ */
+	gap: 20px; /* 札と金額の間の隙間 */
+  }
+.bet-tag-vertical {
+  background-color: #000; /* 黒塗り */
+  color: #fff; /* 白色フォント */
+  padding: 20px 5px; /* 上下と左右の余白 */
+  border: 2px solid #d4af37; /* 金縁 */
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.5); /* 縁をわずかに光らせる */
+  
+  /* 縦書き設定 */
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: 4px; /* 角をわずかに丸める */
+  min-width: 30px; /* 札の幅 */
+}
+
+  .payout-amount {
+    font-weight: 900;
+    color: #ffd740;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.8);
+    margin: 5px 0;
+  }
+.amount-group {
+  text-align: left; /* 金額は左寄せにすると札とのバランスが良い */
+}
+
+.payout-amount {
+  margin: 0;
+  white-space: nowrap; /* スマホで金額が途中で改行されないように */
+}
+  .result-text-container {
+    background-color: rgba(0,0,0,0.3); /* 赤背景に馴染むよう黒透過に */
+    border: 1px solid #d4af37;
+    padding: 8px 15px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .result-text-highlight {
+    color: #ffd740;
+  }
+
+  /* スマホ対応：カーブと食い込みの調整 */
+  @media (max-width: 768px) {
+    .payout-wrapper {
+    }
+	.payout-main {
+    gap: 10px;
+  }
+  .bet-tag-vertical {
+    padding: 8px 3px;
+    min-width: 25px;
+  }
+    /* フォントサイズ指定はHTMLのクラス(fs80等)に依存 */
+  }
+
+  
+  .ms-section-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+    /* フォント種類・サイズは指定なし */
+  }
+
+  /* レイアウトのベース */
+  .ms-flex-row {
+    display: flex;
+    flex-direction: row; /* デスクトップは横並び */
+    gap: 30px;
+    /* align-items: flex-start; */
+  }
+
+  /* 左カラム：タイトルとメイン画像 */
+  .ms-col-content-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* 右カラム：3つの説明吹き出し */
+  .ms-col-side-notes {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* タイトル部分 */
+  .ms-main-title {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .ms-sub-text {
+    color: red;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  /* メイン画像エリア（スマホと女性など） */
+  .ms-image-box {
+    position: relative;
+    width: 100%;
+  }
+
+  .ms-placeholder-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+  }
+
+  /* 画像内のバッジ（30秒以内など） */
+  .ms-badge {
+    position: absolute;
+    bottom: 20px;
+    right: -10px;
+    background: #ffffff;
+    border: 2px solid #0076d6;
+    color: #0076d6;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* 吹き出し共通設定 */
+  .ms-balloon {
+    position: relative;
+    background-color: #f0f7ff;
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  /* デスクトップ用の吹き出しの角（左向き） */
+  .ms-balloon::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -15px;
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #f0f7ff transparent transparent;
+  }
+   .ms-balloon2 {
+    position: relative;
+    background-color: #0036cc;
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  /* デスクトップ用の吹き出しの角（左向き） */
+  .ms-balloon2::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -15px;
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #0036cc transparent transparent;
+  }
+
+  .ms-balloon-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+.ms-balloon-text2 {
+    line-height: 1.5;
+  }
+  /* アイコンのイグザンプルサイズ */
+  .ms-icon-sample {
+    width: 1.2em;
+    height: 1.2em;
+	background: black;
+    border-radius: 4px;
+  }
+   .ms-icon-sample2 {
+    width: 1.2em;
+    height: 1.2em;
+    background: red;
+    border-radius: 4px;
+  }
+
+  /* --- スマートフォン版の挙動 --- */
+  @media (max-width: 768px) {
+    .ms-section-container {
+      padding: 20px;
+    }
+
+    .ms-flex-row {
+      flex-direction: column; 
+      gap: 40px;
+    }
+
+    /* スマホ版では吹き出しの角を「上向き」に変更 */
+    .ms-balloon::before {
+      top: -15px;
+      left: 30px;
+      border-width: 0 10px 15px 10px;
+      border-color: transparent transparent #f0f7ff transparent;
+    }
+
+    .ms-image-box {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+	 .ms-balloon{
+		max-width: 100%;
+	}
+  }
+
+  .lp-point-section {
+    width: 100%;
+    max-width: 900px;
+    /* background-color: #f9f9f9;  */
+    padding: 30px 10px;
+	margin: 0 auto;
+  }
+
+  /* 各ポイントの列（フレックス） */
+  .lp-point-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+	background-color: #f9f9f9;
+	border-radius: 20px;
+  }
+  .lp-point-row2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+	background-color: #f9f9f9;
+	border-radius: 20px;
+	margin-top: 150px;
+  }
+
+  /* 偶数番目の列は左右反転（デスクトップ） */
+  .lp-point-row.reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* 画像エリア */
+  .lp-point-image-box {
+    flex: 1;
+  }
+
+  .lp-point-image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.05); /* 軽い装飾 */
+  }
+
+  /* テキストエリア */
+  .lp-point-text-box {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+    background: #ffffff; /* 白背景のカード風 */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+
+  /* 背景の「Point 01」などの大きな数字（フォントサイズ指定なし） */
+  .lp-point-bg-number {
+    position: absolute;
+    top: 1rem;
+    right: 10px;
+    color: rgba(212, 175, 55, 0.20); /* 薄いゴールド */
+    font-family: serif;
+    font-weight: bold;
+    font-style: italic;
+    z-index: 0;
+  }
+
+  .lp-point-title {
+    font-weight: bold;
+    margin-bottom: 1em;
+    position: relative;
+    z-index: 1;
+  }
+
+  .lp-point-description {
+    color: #444;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* スマートフォン対応 */
+  @media (max-width: 768px) {
+    .lp-point-row, 
+	.lp-point-row2, 
+	.lp-point-row.reverse {
+      flex-direction: column; /* 画像が上、テキストが下 */
+      gap: 0px;
+      margin-bottom: 50px;
+    }
+
+    .lp-point-text-box {
+      width: 90%;
+      margin: -30px auto 0; /* 画像に少し被せる演出 */
+      padding: 30px 20px 20px;
+    }
+  .lp-point-row2 {
+	margin-top: 50px;
+  }
+  .lp-point-title{
+	padding-top: 25px;
+  }
+   .lp-point-bg-number {
+    top: 0.5rem;
+   }
+}
+
+
+.ms-system-container {
+    width: 100%;
+    margin: 0 auto;
+    background: radial-gradient(circle at center, #001529 0%, #000000 100%); /* 深海のダークブルー */
+    padding: 60px 40px;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  /* 背景の装飾光 */
+  .ms-system-container::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); */
+    opacity: 0.1;
+    pointer-events: none;
+  }
+
+  .ms-system-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 左側：テキストエリア */
+  .ms-system-info {
+    flex: 1;
+  }
+  .ms-system-label2 {
+    color: #00d2ff;
+    border: 1px solid #00d2ff;
+    padding: 4px 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+
+  .ms-system-title {
+    color: #ffffff;
+    font-weight: 900;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+  }
+
+  /* 右側：画像エリア（脳のイメージ） */
+  .ms-system-visual {
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+
+  .ms-brain-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(0, 210, 255, 0.8));
+    animation: ms-pulse 4s infinite ease-in-out;
+  }
+
+  @keyframes ms-pulse {
+    0%, 100% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.03); }
+  }
+
+  /* スマホ版対応 */
+  @media (max-width: 768px) {
+    .ms-system-container {
+      padding: 40px 20px;
+    }
+    .ms-system-flex {
+      flex-direction: column-reverse; /* 画像を上に、テキストを下に */
+      gap: 30px;
+    }
+    .ms-system-visual {
+      order: -1; /* 画像が先に来るように指定 */
+    }
+	.ms-system-flex{
+		display: block;
+	}
+  }
+
+  .ms-simple-arrow-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: transparent; /* 背景がどんな色でも馴染むように透過 */
+  }
+
+  /* 矢印（V字）の土台 */
+  .ms-simple-arrow-v {
+    position: relative;
+    width: 70px;  /* 矢印の横幅 */
+    height: 20px; /* 矢印の高さ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: ms-scroll-down 2s infinite;
+  }
+
+  /* 斜線2本を疑似要素で作成 */
+  .ms-simple-arrow-v::before,
+  .ms-simple-arrow-v::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 35.5px; /* 斜線の長さ */
+    height: 2px; /* 斜線の太さ */
+    background-color: #ffffff; /* 白色 */
+    border-radius: 2px;
+  }
+
+  /* 左側の斜線 */
+  .ms-simple-arrow-v::before {
+    left: 2px;
+    transform: rotate(30deg);
+  }
+
+  /* 右側の斜線 */
+  .ms-simple-arrow-v::after {
+    right: 2px;
+    transform: rotate(-30deg);
+  }
+  .ms-simple-arrow-v2 {
+    position: relative;
+    width: 70px;  /* 矢印の横幅 */
+    height: 20px; /* 矢印の高さ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: ms-scroll-down 2s infinite;
+  }
+
+  /* 斜線2本を疑似要素で作成 */
+  .ms-simple-arrow-v2::before,
+  .ms-simple-arrow-v2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 35.5px; /* 斜線の長さ */
+    height: 2px; /* 斜線の太さ */
+    background-color: black; /* 白色 */
+    border-radius: 2px;
+  }
+
+  /* 左側の斜線 */
+  .ms-simple-arrow-v2::before {
+    left: 2px;
+    transform: rotate(30deg);
+  }
+
+  /* 右側の斜線 */
+  .ms-simple-arrow-v2::after {
+    right: 2px;
+    transform: rotate(-30deg);
+  }
+/* ふわふわと下に動くアニメーション */
+  @keyframes ms-scroll-down {
+    0% {
+      transform: translateY(0);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateY(15px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 0.3;
+    }
+  }
+
+  .un-w {
+  text-decoration: none; /* デフォルトの下線を消す場合 */
+  border-bottom: 2px solid #ffffff; /* 線の太さと色 */
+  display: inline-block; /* 線を文字の幅に合わせる */
+  line-height: 1.2; /* 線と文字の間隔調整 */
+}
+
+.ms-system-triangle-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* 前のセクション（ms-system-container）との境界をなくすため、margin-topをマイナスに */
+    margin-top: -1px; 
+    z-index: 2; /* 前のセクションの上に重ねる */
+  }
+
+  /* 下向き三角形本体 */
+  .ms-system-triangle {
+    width: 0;
+    height: 0;
+    /* 三角形のサイズ調整：border-widthで調整 */
+    border-style: solid;
+    border-width: 60px 200px 0 200px; /* 上、右、下、左 */
+    
+    /* ms-system-containerと同じグラデーション色を再現 */
+    /* ボーダーにはグラデーションが直接使えないため、border-top-colorを調整 */
+    border-color: transparent; /* 基本は透過 */
+    border-top-color: #00050a; /* ms-system-containerのグラデーション中心色 */
+
+    position: relative;
+    
+    /* 視線誘導アニメーション：ふわふわと下に動く */
+    animation: ms-triangle-bounce 2s infinite ease-in-out;
+  }
+
+  /* 三角形にさらにシステム的な青い光の枠線を薄く追加 */
+  .ms-system-triangle::before {
+    content: '';
+    position: absolute;
+    top: -62px; /* border-widthの調整に合わせて微調整 */
+    left: -102px; /* border-widthの調整に合わせて微調整 */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 62px 102px 0 102px; /* わずかに大きく */
+    border-color: transparent;
+    z-index: -1; /* 三角形の後ろに配置 */
+  }
+
+  @media screen and (max-width: 480px) {
+  .ms-system-triangle-wrapper {
+    /* 必要に応じて位置調整 */
+    margin-top: -1px;
+  }
+
+  .ms-system-triangle {
+    /* スマホの画面幅に合わせて三角形を小さく、鋭角に調整 */
+    border-width: 30px 80px 0 80px; /* 上の高さを半分、横幅を大幅に縮小 */
+  }
+
+  .ms-system-triangle::before {
+    /* 枠線用の擬似要素も本体に合わせてサイズ変更 */
+    top: -31px; 
+    left: -81px;
+    border-width: 31px 81px 0 81px;
+  }
+}
+
+
+
+  .vo-section-container {
+    width: 100%;
+    max-width: 1200px; /* デスクトップでの最大幅 */
+    margin: 0 auto;
+    padding: 60px 20px;
+    box-sizing: border-box;
+  }
+
+  /* セクションタイトル：\実際のお客様の声／ */
+  .vo-main-title {
+    color: #cc0000; /* 赤色 */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  /* 各コメントのカード枠（デスクトップ） */
+  .vo-comment-card {
+    background-color: #fffdec; /* 柔らかな黄色背景 */
+    border: 3px solid #000000; /* 太い黒枠 */
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+    position: relative;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.1); /* 軽い影 */
+  }
+
+  /* コメントのテキスト（共通設定） */
+  .vo-text-base {
+    color: #333333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  /* 強調テキスト（赤色）：とりあえず基本サービス～、親身になって寄り添って～ */
+  .vo-text-highlight {
+    color: #cc0000;
+    font-weight: bold;
+  }
+
+  /* 実績データエリア（黒枠の下の部分） */
+  .vo-data-bar {
+    display: flex;
+    flex-wrap: wrap; /* スマホで折り返すため */
+    gap: 15px 30px; /* 横の隙間 縦の隙間 */
+    padding-top: 20px;
+    border-top: 2px solid #000000; /* カード内の区切り線 */
+    margin-top: 20px;
+    color: #000000;
+  }
+
+  /* 実績データの各項目 */
+  .vo-data-item {
+    font-weight: bold;
+  }
+
+  /* 回収金：未定（赤色強調） */
+  .vo-data-status-unfixed {
+    color: #cc0000;
+  }
+
+  /* ---------- スマホ版対応（レスポンスブ） ---------- */
+  @media (max-width: 768px) {
+    .vo-section-container {
+      padding: 40px 15px; /* 余白を少し詰める */
+    }
+
+    .vo-comment-card {
+      padding: 20px; /* カード内の余白を詰める */
+      border-width: 2px; /* 枠線を少し細く */
+    }
+
+    /* データエリア：スマホでは縦並びに近く */
+    .vo-data-bar {
+      flex-direction: column; /* 縦に並べる */
+      gap: 10px;
+      padding-top: 15px;
+    }
+
+    /* 文字サイズは指定しないが、改行などを調整して読みやすく */
+    .vo-text-base {
+      margin-bottom: 15px;
+    }
+  }
+
+  /* 「逆転ジャンボ」なら */
+
+  /* 料金リストのラッパー */
+
+  /* 登録費・年会費の行 */
+
+  /* ”完全無料” のハイライト装飾 */
+
+  /* 基本サービス0円！ */
+
+  /* 毎週末が、人生逆転のチャンス！ */
+
+  /* スマホ版対応 */
+
+/* 画像自体の設定 */
+
+/* スマホ版（画面幅が狭い時）の調整 */
+
+  /* 装飾用の豪華な光沢効果（右側の栄光エリアに） */
+
+  /* 共通のフォント設定（サイズ、タイプは指定なし） */
+
+  /* 上半分のメッセージ */
+
+  /* 下半分のモットーエリア */
+
+  /* モットーのタイトル */
+
+  /* モットー本体の囲み線装飾 */
+
+  /* 囲み線の角の装飾（L字型の金枠） */
+  
+  /* 左上 */
+  
+  /* 右下 */
+
+  /* スマホ版対応 */
+  
+
+   .gyaku2 {
+    margin-top: -200px; /* ★ topの代わりにこちらを使う */
+    position: relative; /* z-indexを効かせるために残しておく */
+    z-index: 0;
+}
+
+ @media (max-width: 768px) {
+    .gyaku2 {
+    margin-top: -60px; 
+    }
+ }
+.zz2{
+	 position: relative;
+	z-index: 2;
+}
+
+.area-sai{
+	 width: 100%;
+    background: radial-gradient(circle at center, #001529 0%, #000000 100%); /* 深海のダークブルー */
+    overflow: hidden;
+	border-radius: 20px 20px 0px 0px;
+}
+
+:root {
+            --gold-gradient: linear-gradient(to bottom, #f9e698 0%, #d4af37 50%, #b8860b 100%);
+            --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* --- レイアウト用の設定 --- */
+        .result-wrapper {
+            display: grid;
+            gap: 5px; /* カード同士の間隔 */
+            padding: 5px 20px;
+            justify-content: center;
+        }
+
+        /* PC版：横に2つ並べる */
+        @media (min-width: 1024px) {
+            .result-wrapper {
+                grid-template-columns: repeat(2, 450px);
+            }
+        }
+
+        /* SP版：1つで下に並ぶ（デフォルト） */
+        @media (max-width: 1023px) {
+            .result-wrapper {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+			
+        }
+
+        /* --- 各カードのデザイン（提供コードの調整） --- */
+        .result-card {
+            width: 100%; /* 親のグリッド幅に合わせる */
+            max-width: 500px;
+            height: 250px;
+            background-color: #1a1a1a;
+            background-image: url('image/bakebg.png');
+            background-size: cover;
+            position: relative;
+            padding: 30px;
+            box-sizing: border-box;
+            border: 3px solid #d4af37;
+            font-family: sans-serif;
+            color: #fff;
+            overflow: hidden;
+            /* 複数並んだ時に浮き上がるように少し影を追加 */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .race-info {
+            font-weight: bold;
+            line-height: 1.4;
+            text-shadow: var(--text-shadow);
+        }
+
+        .date { font-size: 1.5rem; }
+        .track { font-size: 1.5rem; }
+        .class-name { font-size: 1.5rem; }
+
+        .ticket-type {
+            margin-top: 10px;
+            font-size: 2rem;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+            display: inline-block;
+        }
+
+        .logo-area {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+        }
+
+        .logo-area img { width: 100%; }
+
+        .bake {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            text-align: right;
+            width: 100%;
+        }
+
+        .amount {
+            font-size: 6rem; /* 10remだと枠をはみ出すため調整 */
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-end;
+            padding-right: 10px;
+        }
+
+        .amount span {
+            font-size: 1.5rem;
+            -webkit-text-fill-color: #d4af37; /* 単位は見やすく単色に */
+            margin: 0 5px;
+        }
+
+        .result-card::before {
+            content: '';
+            position: absolute;
+            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            pointer-events: none;
+        }
+
+		.lp-custom-navbar {
+            background-color: #000;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: flex-end; /* 右寄せ */
+            align-items: center;
+            gap: 12px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        /* --- 黄色のボタン共通設定 --- */
+        .lp-custom-btn {
+            background-color: #ffdd00;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            white-space: nowrap; /* 改行防止 */
+            transition: opacity 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lp-custom-btn:hover {
+            background-color: #ffe600;
+            opacity: 0.9;
+        }
+
+        /* --- モーダル（ポップアップ） --- */
+        .lp-custom-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.75);
+            z-index: 9999;
+            backdrop-filter: blur(2px); /* 背景を少しぼかす */
+        }
+
+        .lp-custom-modal-content {
+            display: none;
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            width: 90%;
+            max-width: 400px; /* PCでの最大幅 */
+            padding: 30px;
+            border-radius: 12px;
+            z-index: 10000;
+            box-sizing: border-box;
+        }
+
+        .lp-custom-modal-content h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .lp-custom-input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px; /* スマホでズームされないためのサイズ */
+        }
+
+        .lp-custom-close {
+            position: absolute;
+            top: 10px; right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        /* --- スマホ向けの調整 --- */
+        @media (max-width: 480px) {
+            .lp-custom-navbar {
+                justify-content: center; /* スマホでは中央寄せ */
+                padding: 10px;
+            }
+            .lp-custom-btn {
+                flex: 1; /* ボタンを均等幅に */
+                padding: 12px 10px;
+                font-size: 13px;
+            }
+        }background-color: #B8C0C2;
 }
 
 *::-webkit-scrollbar-thumb {
