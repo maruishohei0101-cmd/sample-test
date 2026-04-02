@@ -32,8 +32,9 @@
             margin: 0 auto;
             box-sizing: border-box;
             overflow: hidden; /* はみ出し防止 */
-            background-color: #fff;
-        }
+            background-color: #a51111;
+            background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+            /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */        }
 
         /* Swiperコンテナのはみ出し対策 */
         .testimonials-swiper {
@@ -79,9 +80,7 @@
 
         <div id="header" class="">
             <div class="ms-fv-section">
-                <p class="p0 center">
                     <img src="image/sp_head2.png" class="img100 w100 center" alt="">
-                </p>
             </div>
         </div>
 
@@ -152,7 +151,7 @@
                 <div class="zz2">
                     <img src="image/s2.png" class="img100 w100 center" alt="">
                 </div>
-        <div class="area-rt br20 gyaku2 m100" style="border: #A51111 solid 5px;">
+        <div class="br20 gyaku2 m100">
             <div class="center pb20">
                
                 <div class="m150"><img src="image/bg5.png" class="img100 w100 center" alt=""></div>
@@ -303,9 +302,9 @@
           <div class="zz2">
                     <img src="image/s10.png" class="img100 w100 center" alt="">
                 </div>
-        <div class="area-sai gyaku2 m100 gyaku2" style="margin-top: -200px;">
-            <div class="lp-point-section" style="margin-top: 150px;">
-                <div class="lp-point-row">
+        <div class="area-sai center gyaku2">
+            <div class="lp-point-section">
+                <div class="lp-point-row2">
                     <div class="lp-point-image-box">
                         <img src="image/image2.jpg" alt="ベテラン馬券師">
                     </div>
@@ -424,7 +423,7 @@
             <div class="ms-system-triangle"></div>
         </div>
 
-        <div class="ms-section-container" style="background-color: #FFFFFF;border-radius: 30px;padding: 40px;">
+        <div class="ms-section-container" style="background-color: #FFFFFF;border-radius: 30px; margin-top: 40px;">
             <div class="ms-flex-row">       
                 <div class="ms-col-content-main">
                     <div class="ms-main-title">
@@ -479,12 +478,12 @@
             </div>
        </div>
 
-        <div class="zz2">
+        <div class="m50">
                     <img src="image/zi.png" class="img100 w100 center" alt="">
                 </div>
-        <div class="area-rt br20 gyaku2" style="border: #A51111 solid 5px;">
+        <div class="">
 
-        <div class="result-wrapper" style="margin-top: 200px;">
+        <div class="result-wrapper">
         <div class="result-card">
             <div class="logo-area">
                 <img src="image/logo.png" alt="ロゴ">
@@ -700,61 +699,61 @@
             </div>
         </div>
 
-        <section class="kpi-section">
-            <div class="kpi-card">
-                <p class="fs40 bld p0 lh1 center area-p20">
+        <section class="lp-kpi-section">
+            <div class="lp-kpi-wrapper">
+                <h2 class="lp-kpi-main-title">
                     決して、<br>あなたを一人にしません。
-                </p>
-                <div class="kpi-groups">
-                    <figure class="dial" data-percent="97.0">
-                        <figcaption class="label-top lh1">1ヶ月ご利用の<br>満足度</figcaption>
-                        <svg viewBox="0 0 160 160" aria-hidden="true">
-                            <defs>
-                                <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stop-color="#b400ff"/>
-                                    <stop offset="100%" stop-color="#5570ff"/>
-                                </linearGradient>
-                            </defs>
-                            <circle class="ring-bg" cx="80" cy="80" r="64" stroke-width="14" fill="none"/>
-                            <circle class="ring-fg" cx="80" cy="80" r="64" stroke-width="14" fill="none" stroke-dasharray="402" stroke-dashoffset="402"/>
-                        </svg>
-                        <div class="value">
-                            <span class="num">97.0</span><small>%</small>
+                </h2>
+
+                <div class="lp-kpi-grid">
+                    <figure class="lp-dial c-pink" data-percent="97.0">
+                        <figcaption class="lp-dial-label">1ヶ月ご利用の<br>満足度</figcaption>
+                        <div class="lp-dial-wrapper">
+                            <svg viewBox="0 0 160 160">
+                                <circle class="ring-bg" cx="80" cy="80" r="64" />
+                                <circle class="ring-fg" cx="80" cy="80" r="64" stroke-dasharray="402" stroke-dashoffset="402" />
+                            </svg>
+                            <div class="lp-dial-value">
+                                <span class="num">97.0</span><small>%</small>
+                            </div>
                         </div>
                     </figure>
 
-                    <figure class="dial" data-percent="95.0">
-                        <figcaption class="label-top lh1">2ヵ月目以降の<br>継続利用率</figcaption>
-                        <svg viewBox="0 0 160 160" aria-hidden="true">
-                            <use href="#defs"/>
-                            <circle class="ring-bg" cx="80" cy="80" r="64" stroke-width="14" fill="none"/>
-                            <circle class="ring-fg" cx="80" cy="80" r="64" stroke-width="14" fill="none" stroke-dasharray="402" stroke-dashoffset="402"/>
-                        </svg>
-                        <div class="value">
-                            <span class="num">95.0</span><small>%</small>
+                    <figure class="lp-dial c-blue" data-percent="95.0">
+                        <figcaption class="lp-dial-label">2ヵ月目以降の<br>継続利用率</figcaption>
+                        <div class="lp-dial-wrapper">
+                            <svg viewBox="0 0 160 160">
+                                <circle class="ring-bg" cx="80" cy="80" r="64" />
+                                <circle class="ring-fg" cx="80" cy="80" r="64" stroke-dasharray="402" stroke-dashoffset="402" />
+                            </svg>
+                            <div class="lp-dial-value">
+                                <span class="num">95.0</span><small>%</small>
+                            </div>
                         </div>
                     </figure>
 
-                    <figure class="dial" data-percent="93.0">
-                        <figcaption class="label-top lh1">半年後の<br>目標達成率</figcaption>
-                        <svg viewBox="0 0 160 160" aria-hidden="true">
-                            <circle class="ring-bg" cx="80" cy="80" r="64" stroke-width="14" fill="none"/>
-                            <circle class="ring-fg" cx="80" cy="80" r="64" stroke-width="14" fill="none" stroke-dasharray="402" stroke-dashoffset="402"/>
-                        </svg>
-                        <div class="value">
-                            <span class="num">93.0</span><small>%</small>
+                    <figure class="lp-dial c-gold" data-percent="93.0">
+                        <figcaption class="lp-dial-label">半年後の<br>目標達成率</figcaption>
+                        <div class="lp-dial-wrapper">
+                            <svg viewBox="0 0 160 160">
+                                <circle class="ring-bg" cx="80" cy="80" r="64" />
+                                <circle class="ring-fg" cx="80" cy="80" r="64" stroke-dasharray="402" stroke-dashoffset="402" />
+                            </svg>
+                            <div class="lp-dial-value">
+                                <span class="num">93.0</span><small>%</small>
+                            </div>
                         </div>
                     </figure>
                 </div>
-                <p class="m30 p0 bld fs40 center lh1 pb30">
-                    日々寄せられる声は、満足度の高いものばかり。<br>
-                    100人中95人が「このまま続ける」を選択！
-                </p>
+
+                <div class="lp-kpi-footer">
+                    <p class="p0 m10 fs20">日々寄せられる声は、<br>満足度の高いものばかり。</p>
+                    <p class="lp-highlight fs40 p0 m20"><span class="fs60">100</span>人中<span class="fs60">95</span>人が<br>「このまま続ける」を選択！</p>
+                </div>
             </div>
         </section>
-
         <div class="vo-section-container">
-            <div class="vo-main-title fs30 m30">＼実際のお客様の声／</div>
+            <div class="vo-main-title fs30 m30"><span class="yellow">＼実際のお客様の声／</span></div>
 
             <div class="vo-comment-card left">
                 <div class="vo-text-base">
@@ -802,8 +801,8 @@
         </div>
 
                <img src="image/sai2.png" class="img100 w100 center" alt="">
-            <div class="area-rt" style="margin-top: -200px;">
-                <p class="fs50 bld center red ylshadow2 p0" style="padding-top:200px;">むしろ、チャンスです。</p>
+            <div class="">
+                <p class="fs50 bld center red ylshadow2 p0">むしろ、チャンスです。</p>
                        
                 <img src="image/bg5.png" class="img100 w100 center" alt="">
 
@@ -811,9 +810,9 @@
                     <img src="image/zi.png" class="img100 w100 center" alt="">
                 </div>
             </div>
-        <div class="area-rt br20 gyaku2" style="border: #A51111 solid 5px;">
+        <div class="" >
 
-        <div class="result-wrapper" style="margin-top: 200px;">
+        <div class="result-wrapper">
         <div class="result-card">
             <div class="logo-area">
                 <img src="image/logo.png" alt="ロゴ">
@@ -983,107 +982,101 @@
         }
     }
 </script>
-    <script>
-        // 円周（r=64 => 2πr ≒ 402）
-        const CIRC = 2 * Math.PI * 64;
+<script>
+    // 円周（r=64 => 2πr ≒ 402）
+    const CIRC = 2 * Math.PI * 64;
 
-        // 数値カウントアップ
-        function animateNumber(el, to) {
-            const dur = 1600; // ms
-            const start = performance.now();
-            const from = 0;
-            function tick(now) {
-                const t = Math.min(1, (now - start) / dur);
-                const ease = 1 - Math.pow(1 - t, 3); // easeOutCubic
-                const val = (from + (to - from) * ease).toFixed(1);
-                el.textContent = val;
-                if (t < 1) requestAnimationFrame(tick);
-            }
-            requestAnimationFrame(tick);
+    // 数値カウントアップ関数
+    function animateNumber(el, to) {
+        if (!el) return;
+        const dur = 1600; // アニメーション時間
+        const start = performance.now();
+        const from = 0;
+        
+        function tick(now) {
+            const t = Math.min(1, (now - start) / dur);
+            const ease = 1 - Math.pow(1 - t, 3); // easeOutCubic
+            const val = (from + (to - from) * ease).toFixed(1);
+            el.textContent = val;
+            if (t < 1) requestAnimationFrame(tick);
         }
+        requestAnimationFrame(tick);
+    }
 
-        // 各ダイヤルの初期化
-        document.querySelectorAll('.dial').forEach(dial => {
-            const p = parseFloat(dial.dataset.percent || '0');
-            const ring = dial.querySelector('.ring-fg');
+    // 各ダイヤルの初期化（クラス名を lp-dial に修正）
+    document.querySelectorAll('.lp-dial').forEach(dial => {
+        const p = parseFloat(dial.dataset.percent || '0');
+        const ring = dial.querySelector('.ring-fg');
+        if (ring) {
             ring.style.strokeDasharray = CIRC;
-            ring.style.strokeDashoffset = CIRC; // 初期は0%
+            ring.style.strokeDashoffset = CIRC; // 初期状態は空
+            // ターゲットのオフセットを計算して保持
             dial._targetOffset = CIRC * (1 - p / 100);
             dial._targetPercent = p;
-        });
+        }
+    });
 
-        // スクロールで発火（1度だけ）
-        const io = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const dial = entry.target;
-                    dial.classList.add('in-view');
-                    const ring = dial.querySelector('.ring-fg');
-                    ring.style.strokeDashoffset = dial._targetOffset; // ぐるーっと回る
-                    const numEl = dial.querySelector('.num');
-                    animateNumber(numEl, dial._targetPercent);
-                    io.unobserve(dial); // 1回きり
+    // スクロール監視の設定（クラス名を lp-dial に修正）
+    const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const dial = entry.target;
+                dial.classList.add('in-view'); // アニメーション開始用のクラス付与
+                
+                const ring = dial.querySelector('.ring-fg');
+                if (ring) {
+                    // 円を動かす
+                    ring.style.strokeDashoffset = dial._targetOffset;
                 }
-            })
-        }, {
-            threshold: .35
-        });
-
-        document.querySelectorAll('.dial').forEach(d => io.observe(d));
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const target = document.querySelector(".flow-section"); // ←この要素が出てきたら非表示
-            const btn = document.querySelector(".floating-line-btn");
-
-            if (target && btn) {
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            btn.style.display = "none";
-                        } else {
-                            btn.style.display = "inline-block";
-                        }
-                    });
-                }, {
-                    threshold: 0.1
-                });
-                observer.observe(target);
+                
+                const numEl = dial.querySelector('.num');
+                if (numEl) {
+                    // 数字をカウントアップさせる
+                    animateNumber(numEl, dial._targetPercent);
+                }
+                
+                io.unobserve(dial); // 1度動いたら監視を解除
             }
         });
+    }, {
+        threshold: 0.35 // 35%見えたら発火
+    });
 
-        document.addEventListener('DOMContentLoaded', () => {
+    // 監視を開始
+    document.querySelectorAll('.lp-dial').forEach(d => io.observe(d));
+
+    // フローセクションでのボタン非表示処理（既存のまま）
+    document.addEventListener("DOMContentLoaded", () => {
+        const target = document.querySelector(".flow-section");
+        const btn = document.querySelector(".floating-line-btn");
+
+        if (target && btn) {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    btn.style.display = entry.isIntersecting ? "none" : "inline-block";
+                });
+            }, { threshold: 0.1 });
+            observer.observe(target);
+        }
+    });
+
+    // Swiperの初期化（既存のまま）
+    document.addEventListener('DOMContentLoaded', () => {
+        if (typeof Swiper !== 'undefined') {
             new Swiper('.testimonials-swiper', {
                 slidesPerView: 1.1,
                 spaceBetween: 16,
                 loop: true,
-                centeredSlides: false,
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: false
-                },
-                pagination: {
-                    el: '.testimonials-pagination',
-                    clickable: true
-                },
-                navigation: {
-                    nextEl: '.testimonials-next',
-                    prevEl: '.testimonials-prev'
-                },
-                a11y: {
-                    enabled: true
-                },
+                autoplay: { delay: 4000, disableOnInteraction: false },
+                pagination: { el: '.testimonials-pagination', clickable: true },
+                navigation: { nextEl: '.testimonials-next', prevEl: '.testimonials-prev' },
                 breakpoints: {
-                    640: {
-                        slidesPerView: 1,
-                        spaceBetween: 20
-                    },
-                    1024: {
-                        slidesPerView: 2,
-                        spaceBetween: 24
-                    }
+                    640: { slidesPerView: 1, spaceBetween: 20 },
+                    1024: { slidesPerView: 2, spaceBetween: 24 }
                 }
             });
-        });
-    </script>
+        }
+    });
+</script>
 </body>
 </html>
