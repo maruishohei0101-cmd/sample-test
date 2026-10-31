@@ -1,0 +1,844 @@
+@charset "utf-8";
+
+
+.fs12{line-height: 1.6; font-size:1.2rem;}
+.fs18{line-height: 1.6; font-size:1.8rem;}
+.fs20{line-height: 1.6; font-size:2.0rem;}
+.fs30{line-height: 1.6; font-size:3.0rem;}
+.fs40{line-height: 1.6; font-size:4.0rem;}
+.fs50{line-height: 1.6; font-size:5.0rem;}
+.fs60{line-height: 1.6; font-size:6.0rem;}
+.fs80{line-height: 1.6; font-size:8.0rem;}
+.fs100{line-height: 1.6; font-size:10.0rem;}
+
+
+.m10{margin-top:1.0rem;}
+.m20{margin-top:2.0rem;}
+.m30{margin-top:3.0rem;}
+.m50{margin-top:5.0rem;}
+.m60{margin-top:6.0rem;}
+.m100{margin-top:10.0rem;}
+.m150{margin-top:15.0rem;}
+
+.p0{padding-top: 0;}
+.p10{padding-top:1.0rem;}
+.p30{padding-top:3.0rem;}
+.pb20{padding-bottom:2rem;}
+.pb30{padding-bottom:3rem;}
+
+.w100{width: 100%;}
+.h100{height: auto;}
+
+/* ===================================================
+   基本リセット & 全体設定
+=================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #222222;
+  background-color: #ffffff;
+  line-height: 1.7;
+}
+
+/* サイト内すべてのリンクの下線を消す */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===================================================
+   ヘッダー
+=================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid #d9e2ec;
+}
+
+.header-inner {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #102a43;
+}
+
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: #0a1626;
+  transition: color 0.2s;
+}
+
+.brand-logo:hover .brand-title {
+  color: #243b53;
+}
+
+.brand-subtitle {
+  font-size: 8px;
+  letter-spacing: 0.35em;
+  font-weight: 300;
+  /* text-transform: uppercase; */
+  color: #334e68;
+  margin-top: -3px;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.desktop-nav a {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #243b53;
+  transition: color 0.2s;
+}
+
+.desktop-nav a:hover {
+  color: #0a1626;
+}
+
+.header-cart-area {
+  display: flex;
+  align-items: center;
+}
+
+.cart-btn {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #102a43;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.cart-btn:hover {
+  background-color: #f0f4f8;
+}
+
+.header-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: #102a43;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  transform: scale(1);
+  transition: transform 0.2s;
+}
+
+.badge-hidden {
+  transform: scale(0);
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* ===================================================
+   ヒーローエリア
+=================================================== */
+/* ===================================================
+   ヒーローエリア (動画背景 + 中央画像)
+=================================================== */
+/* ===================================================
+   ヒーローエリア (動画背景 + 中央画像)
+=================================================== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #0a1626;
+}
+
+/* 動画ラッパー */
+.hero-video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* 一番後ろ */
+}
+
+/* 抜け落ちていた動画本体の指定 */
+.hero-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 重ねる半透明フィルター */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 22, 38, 0.4);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* 前面コンテンツ */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+/* 中央配置画像 */
+.hero-center-img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
+}
+
+/* ===================================================
+   ボタン
+=================================================== */
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background-color: #c5a880;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: #102a43;
+  color: #102a43;
+}
+
+.btn-outline:hover {
+  background: #102a43;
+  color: #ffffff;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* ===================================================
+   各セクション共通
+=================================================== */
+.page-section {
+  padding: 90px 0;
+}
+
+.section-gray {
+  background-color: #f8f9fa;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-subtitle {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  color: #c5a880;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  color: #0a1626;
+  font-weight: 600;
+}
+
+/* ===================================================
+   コレクション (商品一覧)
+=================================================== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(10, 22, 38, 0.08);
+}
+
+.product-thumb {
+  position: relative;
+  height: 260px;
+}
+
+.thumb-image {
+  width: 100%;
+  height: 100%;
+}
+
+.thumb-1 { background: radial-gradient(circle at 40% 40%, #1e3a5f 0%, #0a1626 100%); }
+.thumb-2 { background: radial-gradient(circle at 60% 40%, #eae8e1 0%, #d4cebe 100%); }
+.thumb-3 { background: linear-gradient(135deg, #102a43 30%, #e2e8f0 100%); }
+
+.product-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #c5a880;
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.product-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0a1626;
+  margin-bottom: 8px;
+}
+
+.product-text {
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 24px;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 16px;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a1626;
+}
+
+.product-price small {
+  font-size: 12px;
+  font-weight: normal;
+  color: #666666;
+}
+
+/* ===================================================
+   サイズガイド
+=================================================== */
+.size-guide-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.guide-steps-box h3,
+.table-container h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #0a1626;
+}
+
+.step-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.step-list li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.guide-note {
+  font-size: 13px;
+  color: #8b6b3e;
+  background: #fcf9f2;
+  padding: 12px;
+  border-left: 3px solid #c5a880;
+}
+
+.size-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.size-table th,
+.size-table td {
+  border: 1px solid #e2e8f0;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.size-table th {
+  background: #f8f9fa;
+  color: #0a1626;
+}
+
+/* ===================================================
+   使い方 (HOW TO)
+=================================================== */
+.howto-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.howto-item {
+  padding: 32px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.howto-number {
+  font-family: "Cormorant Garamond", serif;
+  color: #c5a880;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.howto-item h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #0a1626;
+}
+
+.howto-item p {
+  font-size: 14px;
+  color: #666666;
+}
+
+/* ===================================================
+   レビュー & FAQ
+=================================================== */
+.reviews-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.review-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.review-stars {
+  color: #c5a880;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.review-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #102a43;
+  margin-bottom: 16px;
+}
+
+.review-user {
+  font-size: 12px;
+  color: #666666;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-row {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 20px 0;
+}
+
+.faq-question {
+  font-weight: 600;
+  color: #0a1626;
+  margin-bottom: 8px;
+}
+
+.faq-answer {
+  font-size: 14px;
+  color: #666666;
+}
+
+/* ===================================================
+   フッター
+=================================================== */
+.site-footer {
+  background: #0a1626;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-title {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 0.2em;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===================================================
+   モーダル
+=================================================== */
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 22, 38, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-bg.modal-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-window {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 8px;
+  padding: 32px;
+  position: relative;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666666;
+}
+
+.modal-item-name {
+  font-size: 20px;
+  color: #0a1626;
+  margin-bottom: 4px;
+}
+
+.modal-item-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #c5a880;
+  margin-bottom: 24px;
+}
+
+.input-block {
+  margin-bottom: 20px;
+}
+
+.block-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.shape-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.shape-options label {
+  cursor: pointer;
+}
+
+.shape-options input {
+  display: none;
+}
+
+.shape-options span {
+  display: block;
+  padding: 8px 4px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.shape-options input:checked + span {
+  border-color: #102a43;
+  background: #102a43;
+  color: #ffffff;
+}
+
+.type-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.switch-btn {
+  background: #ffffff;
+  border: none;
+  padding: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.switch-btn.active {
+  background: #102a43;
+  color: #ffffff;
+}
+
+.select-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.custom-fields {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.custom-field {
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+.block-hidden {
+  display: none;
+}
+
+/* ===================================================
+   カートドロワー
+=================================================== */
+.cart-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+  z-index: 1001;
+}
+
+.cart-bg.cart-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 380px;
+  background: #ffffff;
+  z-index: 1002;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  transform: translateX(100%);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-sidebar.cart-open {
+  transform: translateX(0);
+}
+
+.cart-top {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cart-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.cart-item-name {
+  font-size: 15px;
+  color: #0a1626;
+}
+
+.cart-item-detail {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 4px;
+}
+
+.cart-item-price {
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #d9534f;
+  font-size: 12px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.cart-bottom {
+  padding: 20px 24px;
+  border-top: 1px solid #e2e8f0;
+  background: #f8f9fa;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.total-price {
+  font-size: 20px;
+  color: #0a1626;
+}

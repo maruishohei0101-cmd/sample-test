@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/* ===================================================
+   スマホ表示（幅768px以下）
+=================================================== */
+
+/* コンテナ余白 */
+.container {
+  padding: 0 16px;
+}
+
+/* ヘッダー周り */
+.header-inner {
+  height: 64px;
+}
+
+.mobile-menu-btn {
+  display: block; /* スマホでハンバーガーボタンを表示 */
+}
+
+.desktop-nav {
+  display: none; /* デスクトップナビを非表示 */
+}
+
+.brand-title {
+  font-size: 22px;
+}
+
+.brand-subtitle {
+  font-size: 8px;
+}
+
+/* モバイルドロワーナビ */
+.mobile-nav {
+  display: block;
+  background: #ffffff;
+  border-bottom: 1px solid #d9e2ec;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-nav.nav-closed {
+  display: none;
+}
+
+.mobile-nav-list {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-nav-list a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #243b53;
+  padding: 4px 0;
+}
+
+/* ヒーロー */
+
+/* ヒーロー（FV）スマホ調整 */
+.hero-section {
+  height: 70vh; /* スマホ画面に合わせた高さ */
+  min-height: 420px;
+}
+
+.hero-center-img {
+  max-width: 260px; /* スマホでの中央画像の横幅 */
+}
+
+/* セクション余白 */
+.page-section {
+  padding: 50px 0;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 24px;
+}
+
+/* 1カラム配置に変更 */
+.product-grid,
+.reviews-row,
+.howto-row {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.product-thumb {
+  height: 220px;
+}
+
+.product-body {
+  padding: 16px;
+}
+
+.product-footer {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.product-footer .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* サイズガイド */
+.size-guide-row {
+  grid-template-columns: 1fr;
+  padding: 20px 16px;
+  gap: 24px;
+}
+
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.size-table {
+  min-width: 320px;
+}
+
+.size-table th,
+.size-table td {
+  padding: 8px 6px;
+  font-size: 12px;
+}
+
+/* モーダル：画面下部から出るシート表示 */
+.modal-bg {
+  align-items: flex-end;
+  padding: 0;
+}
+
+.modal-window {
+  max-width: 100%;
+  border-radius: 16px 16px 0 0;
+  padding: 24px 20px 32px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* カート：フル幅 */
+.cart-sidebar {
+  width: 100%;
+}

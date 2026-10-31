@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mero - Artisan Nail </title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons (アイコン表示用) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sp.css" media="screen and (max-width: 768px)">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <!-- モバイルメニューボタン -->
+      <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Menu">
+        <i data-lucide="menu" class="header-icon"></i>
+      </button>
+
+      <!-- ブランドロゴ -->
+      <a href="#" class="brand-logo">
+        <span class="brand-title">mero</span>
+        <span class="brand-subtitle">by Nail Studio En.</span>
+      </a>
+
+      <!-- デスクトップナビリンク -->
+      <nav class="desktop-nav">
+        <a href="#collection">COLLECTION</a>
+        <a href="#sizing">SIZING GUIDE</a>
+        <a href="#care">HOW TO USE</a>
+        <a href="#reviews">REVIEWS</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <!-- カートボタン -->
+      <div class="header-cart-area">
+        <button class="cart-btn" onclick="openCart()" aria-label="Shopping Cart">
+          <i data-lucide="shopping-bag" class="header-icon"></i>
+          <span id="cartCountBadge" class="cart-badge badge-hidden">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- モバイルドロワーナビ -->
+    <div id="mobileNav" class="mobile-nav nav-closed">
+      <div class="mobile-nav-list">
+        <a href="#collection" onclick="toggleMobileNav()">COLLECTION (商品一覧)</a>
+        <a href="#sizing" onclick="toggleMobileNav()">SIZING GUIDE (サイズ測定)</a>
+        <a href="#care" onclick="toggleMobileNav()">HOW TO USE (着脱・取扱)</a>
+        <a href="#reviews" onclick="toggleMobileNav()">REVIEWS (お客様の声)</a>
+        <a href="#faq" onclick="toggleMobileNav()">FAQ (よくある質問)</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="hero-section">
+  <!-- 動画ラッパー -->
+  <div class="hero-video-wrap">
+    <!-- videoタグ自体に直接 src を書く方法（推奨） -->
+<video class="hero-bg-video" autoplay muted loop playsinline src="videos/vid3.mp4"></video>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <!-- 前面画像 -->
+  <div class="container hero-content">
+    <img src="image/mero_fv3.PNG" alt="" class="hero-center-img">
+  </div>
+</section>
+
+  <!-- コレクション -->
+  <section class="page-section container" id="collection">
+    <div class="section-heading">
+      <h2 class="section-title">新作・定番アイテム</h2>
+    </div>
+
+    <div class="product-grid">
+      <article class="product-card">
+        <div class="product-thumb">
+          <div class="thumb-image thumb-1"> <img src="image/neil1.JPG" alt="Midnight Shell & Magnet" class="w100"></div>
+          <span class="product-badge">New</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">chappy & Xmas</h3>
+          <p class="product-text">深みのあるワインレッドに微細なブラウンのワッペンと少しボケたプレゼント箱を１つにした人気No.1デザイン。</p>
+          <div class="product-footer">
+            <span class="product-price">¥4,800 <small>(税込)</small></span>
+            <button class="btn btn-outline select-size-btn" data-id="1" data-name="chappy & Xmas" data-price="4800">サイズを選んで購入</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-thumb">
+          <div class="thumb-image thumb-2"><img src="image/neil2.jpeg" alt="Midnight Shell & Magnet" class="w100"></div>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">chappy & wrap</h3>
+          <p class="product-text">乳白色のニュアンスグラデーションに、刺繍のクマと立体ダストゴールドを添えて。</p>
+          <div class="product-footer">
+            <span class="product-price">¥5,200 <small>(税込)</small></span>
+            <button class="btn btn-outline select-size-btn" data-id="2" data-name="chappy & wrap" data-price="5200">サイズを選んで購入</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-thumb">
+          <div class="thumb-image thumb-3"><img src="image/neil3.JPG" alt="Midnight Shell & Magnet" class="w100"></div>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">chappy & yakuza</h3>
+          <p class="product-text">透け感のあるシアーホワイトベースの片腕に、ネイビーのダボっとピケと新鮮な寝癖をプラス。</p>
+          <div class="product-footer">
+            <span class="product-price">¥4,500 <small>(税込)</small></span>
+            <button class="btn btn-outline select-size-btn" data-id="3" data-name="chappy & yakuza" data-price="4500">サイズを選んで購入</button>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+  </section>
+
+  <!-- サイズガイド -->
+  <section class="page-section section-gray" id="sizing">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">自爪の計測方法</h2>
+      </div>
+
+      <div class="size-guide-row">
+        <div class="guide-steps-box">
+          <h3>計測の手順</h3>
+          <ol class="step-list">
+            <li>柔らかいメジャーを用意します。（マスキングテープと定規でも代用可能）</li>
+            <li>爪のカーブに沿わせて、<strong>最も幅が広い部分（中央付近）</strong>の横幅をミリ単位で測ります。</li>
+            <li>両手10本のサイズをメモし、近い番号をお選びください。</li>
+          </ol>
+          <p class="guide-note">※迷った場合は、自爪より1mmほど大きめのサイズを選ぶと爪やすりで微調整できます。</p>
+        </div>
+
+        <div class="table-container">
+          <h3>標準サイズ表 (幅 mm)</h3>
+          <table class="size-table">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>親指</th>
+                <th>人差指</th>
+                <th>中指</th>
+                <th>薬指</th>
+                <th>小指</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>S</strong></td>
+                <td>14mm (#2)</td>
+                <td>11mm (#5)</td>
+                <td>12mm (#4)</td>
+                <td>11mm (#5)</td>
+                <td>8mm (#8)</td>
+              </tr>
+              <tr>
+                <td><strong>M</strong></td>
+                <td>15mm (#1)</td>
+                <td>12mm (#4)</td>
+                <td>13mm (#3)</td>
+                <td>12mm (#4)</td>
+                <td>9mm (#7)</td>
+              </tr>
+              <tr>
+                <td><strong>L</strong></td>
+                <td>16mm (#0)</td>
+                <td>13mm (#3)</td>
+                <td>14mm (#2)</td>
+                <td>13mm (#3)</td>
+                <td>10mm (#6)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 使い方 -->
+  <section class="page-section container" id="care">
+    <div class="section-heading">
+      <h2 class="section-title">装着とオフのお手入れ</h2>
+    </div>
+
+    <div class="howto-row">
+      <div class="howto-item">
+        <span class="howto-number">01. 装着方法</span>
+        <h3>爪の油分を除去して密着</h3>
+        <p>アルコールシート等で爪表面の油分・水分・汚れをしっかり拭き取ります。自爪のサイズに合った粘着グミテープを爪に貼り、チップを根元から空気が入らないよう10秒間押し当てます。</p>
+      </div>
+      <div class="howto-item">
+        <span class="howto-number">02. 外し方</span>
+        <h3>ぬるま湯で優しくオフ</h3>
+        <p>指先をぬるま湯（38〜40度程度）に数分浸し、付属のウッドスティックを爪とチップの隙間にそっと差し込みながらゆっくり剥がします。無理に引っ張らないのが長持ちのコツです。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- レビュー -->
+  <section class="page-section section-gray" id="reviews">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title">お客様の声</h2>
+      </div>
+      <div class="reviews-row">
+        <div class="review-box">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">「写真以上に毛量があって綺麗で感動しました！休日に繰り返し愛用しています。」</p>
+          <span class="review-user">20代 女性 (Mサイズ購入)</span>
+        </div>
+        <div class="review-box">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">「カスタム番号で注文したところ、爪にシンデレラフィットしました。丁寧な梱包と粘着テープ付きで届いてすぐ使えました。」</p>
+          <span class="review-user">30代 女性 (カスタム購入)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="page-section container" id="faq">
+    <div class="section-heading">
+      <h2 class="section-title">よくある質問</h2>
+    </div>
+    <div class="faq-container">
+      <div class="faq-row">
+        <p class="faq-question">Q. ネイルチップは何回くらい使えますか？</p>
+        <p class="faq-answer">A. 粘着グミシールを取り替えていただくことで、繰り返し何度でもご使用いただけます。</p>
+      </div>
+      <div class="faq-row">
+        <p class="faq-question">Q. 注文から発送までどれくらいかかりますか？</p>
+        <p class="faq-answer">A. 完全受注製作のため、ご注文確定後3〜5営業日以内に丁寧に制作・発送いたします。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="container footer-box">
+      <p class="footer-title">mero</p>
+      <p class="footer-copy">&copy; 2026 mero. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- サイズ選択モーダル -->
+  <div class="modal-bg" id="modalOverlay">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modalClose">&times;</button>
+      <h3 class="modal-item-name" id="modalItemTitle">chappy & Xmas</h3>
+      <p class="modal-item-price" id="modalItemPrice">¥4,800 (税込)〜</p>
+
+      <form id="orderForm">
+        <div class="input-block">
+          <label class="block-label">毛量</label>
+          <div class="shape-options">
+            <label><input type="radio" name="shape" value="Short Round" checked><span>Light</span></label>
+            <label><input type="radio" name="shape" value="Oval"><span>Regular</span></label>
+            <label><input type="radio" name="shape" value="Almond"><span>Heavy</span></label>
+          </div>
+        </div>
+
+        <div class="input-block">
+          <label class="block-label">サイズタイプ</label>
+          <div class="type-switch">
+            <button type="button" class="switch-btn active" id="btnPreset">標準セット (S/M/L)</button>
+            <button type="button" class="switch-btn" id="btnCustom">オーダーメイド</button>
+          </div>
+          <p style="font-size: 10px; color: gray;">※天然毛のため個体差がございます。ご了承ください</p>
+
+        </div>
+
+        <div class="input-block" id="presetSelectWrap">
+          <label class="block-label">サイズを選択</label>
+          <select class="select-field" id="presetSize">
+            <option value="S">Sサイズ (2, 5, 4, 5, 8)</option>
+            <option value="M" selected>Mサイズ (1, 4, 3, 4, 7)</option>
+            <option value="L">Lサイズ (0, 3, 2, 3, 6)</option>
+          </select>
+        </div>
+
+        <div class="input-block block-hidden" id="customInputsWrap">
+          <label class="block-label">左右のチップ番号 (親指 → 小指)</label>
+          <div class="custom-fields">
+            <input type="number" min="0" max="9" placeholder="親" class="custom-field" required>
+            <input type="number" min="0" max="9" placeholder="人" class="custom-field" required>
+            <input type="number" min="0" max="9" placeholder="中" class="custom-field" required>
+            <input type="number" min="0" max="9" placeholder="薬" class="custom-field" required>
+            <input type="number" min="0" max="9" placeholder="小" class="custom-field" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">カートに追加する</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- カートドロワー -->
+  <div class="cart-bg" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-sidebar" id="cartDrawer">
+    <div class="cart-top">
+      <h3>Shopping Cart</h3>
+      <button class="cart-close-btn" onclick="closeCart()">&times;</button>
+    </div>
+    <div class="cart-list" id="cartItemsContainer">
+      <p class="empty-text">カートは空です。</p>
+    </div>
+    <div class="cart-bottom">
+      <div class="total-row">
+        <span>合計</span>
+        <span class="total-price" id="cartTotal">¥0</span>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkoutBtn" disabled>購入手続きへ進む</button>
+    </div>
+  </aside>
+
+  <!-- JavaScript -->
+  <script>
+    lucide.createIcons();
+
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('nav-closed');
+    }
+
+    const state = {
+      cart: [],
+      activeItem: null,
+      sizeMode: 'preset'
+    };
+
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalClose = document.getElementById('modalClose');
+    const modalItemTitle = document.getElementById('modalItemTitle');
+    const modalItemPrice = document.getElementById('modalItemPrice');
+    const btnPreset = document.getElementById('btnPreset');
+    const btnCustom = document.getElementById('btnCustom');
+    const presetWrap = document.getElementById('presetSelectWrap');
+    const customWrap = document.getElementById('customInputsWrap');
+    const orderForm = document.getElementById('orderForm');
+    const cartDrawer = document.getElementById('cartDrawer');
+    const cartOverlay = document.getElementById('cartOverlay');
+    const cartItemsContainer = document.getElementById('cartItemsContainer');
+    const cartBadge = document.getElementById('cartCountBadge');
+    const cartTotal = document.getElementById('cartTotal');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+
+    document.querySelectorAll('.select-size-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        state.activeItem = {
+          id: btn.dataset.id,
+          name: btn.dataset.name,
+          price: parseInt(btn.dataset.price, 10)
+        };
+        modalItemTitle.textContent = state.activeItem.name;
+        modalItemPrice.textContent = '¥' + state.activeItem.price.toLocaleString() + ' (税込)';
+        modalOverlay.classList.add('modal-open');
+      });
+    });
+
+    modalClose.addEventListener('click', () => modalOverlay.classList.remove('modal-open'));
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) modalOverlay.classList.remove('modal-open');
+    });
+
+    btnPreset.addEventListener('click', () => {
+      state.sizeMode = 'preset';
+      btnPreset.classList.add('active');
+      btnCustom.classList.remove('active');
+      presetWrap.classList.remove('block-hidden');
+      customWrap.classList.add('block-hidden');
+    });
+
+    btnCustom.addEventListener('click', () => {
+      state.sizeMode = 'custom';
+      btnCustom.classList.add('active');
+      btnPreset.classList.remove('active');
+      presetWrap.classList.add('block-hidden');
+      customWrap.classList.remove('block-hidden');
+    });
+
+    orderForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const shape = document.querySelector('input[name="shape"]:checked').value;
+      let sizeInfo = '';
+
+      if (state.sizeMode === 'preset') {
+        const val = document.getElementById('presetSize').value;
+        sizeInfo = val + 'サイズ';
+      } else {
+        const inputs = Array.from(document.querySelectorAll('.custom-field')).map(i => i.value || '0');
+        sizeInfo = 'カスタム (' + inputs.join(',') + ')';
+      }
+
+      state.cart.push({
+        id: Date.now(),
+        name: state.activeItem.name,
+        price: state.activeItem.price,
+        shape: shape,
+        size: sizeInfo
+      });
+
+      modalOverlay.classList.remove('modal-open');
+      renderCart();
+      openCart();
+    });
+
+    function openCart() {
+      cartDrawer.classList.add('cart-open');
+      cartOverlay.classList.add('cart-open');
+    }
+
+    function closeCart() {
+      cartDrawer.classList.remove('cart-open');
+      cartOverlay.classList.remove('cart-open');
+    }
+
+    function renderCart() {
+      const count = state.cart.length;
+      cartBadge.textContent = count;
+      if (count > 0) {
+        cartBadge.classList.remove('badge-hidden');
+      } else {
+        cartBadge.classList.add('badge-hidden');
+      }
+
+      if (count === 0) {
+        cartItemsContainer.innerHTML = '<p class="empty-text">カートは空です。</p>';
+        cartTotal.textContent = '¥0';
+        checkoutBtn.disabled = true;
+        return;
+      }
+
+      checkoutBtn.disabled = false;
+      const total = state.cart.reduce((sum, item) => sum + item.price, 0);
+      cartTotal.textContent = '¥' + total.toLocaleString();
+
+      cartItemsContainer.innerHTML = state.cart.map((item, idx) => `
+        <div class="cart-item-row">
+          <div>
+            <h4 class="cart-item-name">${item.name}</h4>
+            <div class="cart-item-detail">${item.shape} / ${item.size}</div>
+            <div class="cart-item-price">¥${item.price.toLocaleString()}</div>
+          </div>
+          <button class="delete-btn" onclick="removeItem(${idx})">削除</button>
+        </div>
+      `).join('');
+    }
+
+    window.removeItem = (index) => {
+      state.cart.splice(index, 1);
+      renderCart();
+    };
+
+    
+  </script>
+</body>
+</html>
